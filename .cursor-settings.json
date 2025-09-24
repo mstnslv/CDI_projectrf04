@@ -1,0 +1,14 @@
+{
+  "context": {
+    "bringIn": [
+      {
+        "path": "src",
+        "type": "directory"
+      },
+      {
+        "path": "public",
+        "type": "directory"
+      }
+    ]
+  }
+} 

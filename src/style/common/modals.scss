@@ -1,0 +1,407 @@
+@import "/src/style/style_vars.scss";
+
+.cdi-modal.cdi-modalcontacts{
+
+}
+
+.cdi-modal.cdi-modalrequest{
+
+}
+
+
+//overlay container
+.cdi-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input::placeholder{
+    color: $avto-clrtext-gray;
+    font-weight: 500;
+  }
+
+  //for closing buy click outside modal
+  & .cdi-modal_overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    background-color: rgba(19, 19, 19, 0.2);
+    backdrop-filter: blur(5px); //вкл для оверлея
+  }
+
+  //window
+  & .cdi-modal_window {
+    position: relative;
+    z-index: 10005;
+    @include flexBetween;
+    @include borderRadius;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    max-width: 480px;
+    width: 100%;
+    min-height: 360px;
+    overflow: hidden;
+
+
+    & .cdi-modal_close {
+      position: absolute;
+      z-index: 10006;
+      top: 0;
+      right: 0;
+      padding: $avto_gap * 0.5;
+      cursor: pointer;
+
+      & svg {
+        @include icon--big;
+      }
+    }
+
+    & .cdi-modal_form {
+      padding: $avto_gap * 2;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+
+
+      & .cdi-modal_form__top {
+        & .cdi-modal_h2 {
+          @include avto-fontH2;
+          text-transform: uppercase;
+          color: $clrTextBlack;
+        }
+
+        & .cdi-modal_subheadtext {
+          padding-top: $avto_gap;
+          @include avto-font1;
+          color: $avto_clrtext-graydark;
+        }
+      }
+
+      & .cdi-modal_form__mid {
+        padding-top: $avto_gap;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: $avto_gap * 2;
+        width: 100%;
+
+
+        & .cdi-modal_inptwrap {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: $avto_gap * 0.5;
+          width: 100%;
+
+          & .ninput_label {
+            @include avto-font1;
+            padding-bottom: $avto_gap * 0.25;
+            padding-left: 0;
+            color: $avto_clrtext-graydark
+          }
+
+          & .cdi-moda_inpt1 {
+            @include mixin-input3;
+
+          }
+
+          & .cdi-moda_inpt2 {
+            @include mixin-input3;
+          }
+        }
+
+        & .cdi-modal_btnwrap {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: $avto_gap;
+          width: 100%;
+
+          & .cdi-modal_btn1 {
+            @include avto-btnregular;
+            @include avto-btn-clr--accent;
+            width: 100%;
+          }
+
+          & .cdi-modal_btn2 {
+            @include avto-btnregular;
+            @include avto-btn-clr--gray;
+            width: 100%;
+          }
+
+          & .cdi-modal_btn3 {
+            @include avto-btnregular;
+            @include avto-btn-clr--accent;
+            width: 100%;
+          }
+
+          & .cdi-modal_btn4 {
+            @include avto-btnregular;
+            @include avto-btn-clr--gray;
+            width: 100%;
+          }
+        }
+      }
+
+      & .cdi-modal_form__bottom {
+        padding-top: $avto_gap;
+
+        & .cdi-modal_graytext {
+          font-size: 12px;
+          color: $avto_clrtext-graydark;
+          padding-top: $avto_gap* 0.5;
+          padding-bottom: $avto_gap * 0.5;
+
+          & a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  & .modal_window__content--finish{
+    display: none;
+  }
+
+}
+
+
+
+
+// Форма контактов
+.cdi-modal.cdi-modalcontacts{
+  & .cdi-modal_form {
+    padding: $avto_gap * 2;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    & .cdi-modal_form__top {
+      & .cdi-modal_h2 {
+        @include avto-fontH2;
+        text-transform: uppercase;
+        color: $clrTextWhite;
+      }
+
+      & .cdi-modal_subheadtext {
+        padding-top: $avto_gap;
+        @include avto-font1;
+        color: $avto_clrtext-graydark;
+      }
+    }
+
+    & .cdi-modal_form__mid {
+      padding-top: $avto_gap;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: $avto_gap * 2;
+      width: 100%;
+
+
+      & .cdi-modal_content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & .cdi-modalcontacts__phones{
+
+          &>.text{
+            & .text-block-wrap-div{
+              color: rgb(253, 253, 253);
+              font-size: 13px;
+            }
+            margin-bottom: 5px;
+          }
+          &>.list{
+
+            & .list__item{
+              padding-top: 5px;
+
+
+
+              & .text-block-wrap-div{
+                @include avto-font1;
+                font-weight: 600;
+                color: rgb(253, 253, 253);
+                font-size: 15px;
+
+                &:last-child{
+                  margin-left: 1ch;
+
+                }
+              }
+
+            }
+
+
+          }
+        }
+
+
+        & .cdi-modalcontacts__offices{
+          color: $avto_clrtext-white;
+          & .cdi-modalcontacts__offices__item{
+            margin-bottom: 10px;
+
+            & a{
+              display: block;
+              @include avto-font1;
+              color: $avto_clrtext-white;
+              font-weight: 400;
+              font-size: 13px;
+              padding-bottom: 5px;
+              padding-top: 5px;
+            }
+          }
+
+        }
+
+
+      }
+
+
+      & .cdi-modal_btnwrap {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: $avto_gap;
+        width: 100%;
+
+        & .cdi-modal_btn1 {
+          @include avto-btnregular;
+          @include avto-btn-clr--accent;
+          width: 100%;
+        }
+
+      }
+    }
+
+  }
+
+}
+
+.cdi-modal.cdi-modalrequest.cdi-modal--notvalid{
+
+  & .cdi-modal_form{
+
+    & .cdi-modal_form__mid{
+
+
+      & .cdi-modal_inptwrap{
+        & .ninput_label{
+          color: $clrTextRed;
+
+        }
+      }
+    }
+
+
+
+  }
+}
+
+
+
+// Форма контактов - Прячем
+.cdi-modal.cdi-modalcontacts{
+  display: none;
+}
+// Форма контактов - Показываем
+.cdi-modal.cdi-modalcontacts.showmodalcontacts{
+  display: flex;
+}
+
+
+@media screen and (max-width: 599px) {
+  .cdi-modal{
+    align-items: flex-end;
+    & .cdi-modal_overlay{
+      backdrop-filter: blur(10px);  //вкл для оверлея
+
+    }
+
+    //window
+    & .cdi-modal_window {
+      border-radius: 0;
+      border: none;
+      max-width: none;
+      width: 100%;
+      height: auto;
+      min-height: auto;
+      overflow:auto;
+      backdrop-filter: blur(0px); //отключаем для моб, вкл для оверлея
+
+      & .cdi-modal_close {
+        padding: $avto_gap * 0.5;
+        cursor: pointer;
+
+        & svg {
+          @include icon--big;
+        }
+      }
+
+      & .cdi-modal_form {
+        padding: $avto_gap;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+
+        @include flexVertical;
+      }
+    }
+  }
+
+  // Форма контактов
+  .cdi-modal.cdi-modalcontacts{
+    & .cdi-modal_form {
+      padding: $avto_gap;
+
+
+
+
+      & .cdi-modal_form__mid {
+        padding-top: $avto_gap;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: $avto_gap * 2;
+        width: 100%;
+
+
+        & .cdi-modal_content{
+          gap: 20px;
+          & .cdi-modalcontacts__phones{
+
+            &>.list{
+
+              & .list__item{
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+              }
+
+
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

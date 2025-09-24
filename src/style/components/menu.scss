@@ -1,0 +1,263 @@
+@import "/src/style/style_vars.scss";
+
+.menubar{
+  position: fixed;
+  z-index: 9000;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include flexCenter;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.avtomenu{
+  margin: 0 auto;
+  max-width: 1020px;
+  width: 100%;
+  height: $menuHeight;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .avtomenu-logo{
+    min-width: 300px;
+    height: 100%;
+    @include flexCenter;
+    justify-content: flex-start;
+    gap: $avto_gap-mini * 1;
+
+    & svg{
+      @include icon--big;
+      animation: wheelrotate 5s linear infinite;
+
+      & *{
+        fill: $avto-clrtext-dark;
+      }
+    }
+
+    & .avtomenu-logo_text{
+      @include avto-fontH2;
+      //font-size: 18px;
+      text-align: center;
+      font-weight: 600;
+      fill: $avto-clrtext-dark;
+      color: $avto_clr-accent;
+    }
+
+    &:hover {
+
+      svg {
+        animation: wheelrotate 1s linear infinite;
+      }
+    }
+  }
+
+  & .avtomenu-menuitem{
+    width: 300px;
+    height: 100%;
+    @include flexCenter;
+
+    & .avtomenu-menuitem_text{
+      @include avto-font1;
+      text-align: center;
+      font-weight: 600;
+      color: $avto-clrtext-dark;
+      position: relative;
+
+/*      &:after{
+        content: '';
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 2px;
+        background-color: $avto-clrtext-dark;
+        top: 100%;
+        left: 0;
+      }*/
+    }
+  }
+
+  & .avtomenu-contacts{
+    @include flexCenter;
+    gap: 0;//$avto_gap-mini;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    min-width: 300px;
+
+
+    & .avtomenu-contacts_tel{
+      //padding: 0 $avto-gap-mini;
+
+      & .avtomenu-contacts_text{
+        @include avto-fontH3;
+        text-align: center;
+        font-weight: 600;
+        color: $avto-clrtext-dark;
+        user-select: all;
+        cursor: text;
+
+        &::selection{
+          background-color: $avto-clrtext-gray;
+        }
+      }
+
+
+    }
+
+    & .avtomenu-contacts_telegram{
+      padding: 0 $avto-gap-mini;
+
+    }
+
+    & .avtomenu-contacts_whatsapp{
+      padding: 0 $avto-gap-mini;
+
+
+    }
+
+
+    & .avtomenu-contacts_icon{
+      @include icon--big;
+
+    }
+    & .avtomenu-contacts_icon svg{
+      @include icon--big;
+    }
+
+
+  }
+
+}
+
+@media screen and (max-width: 999px) {
+
+  .avtomenu{
+    height: $menuHeight-MOB;
+    padding: 0 $avto_gap-mini--mobile;
+
+    & .avtomenu-logo{
+      width: auto;
+      justify-content: flex-start;
+      gap: $avto_gap-mini--mobile * 0.5;
+      min-width: 160px;
+
+      & svg{
+        @include icon--big;
+      }
+
+      & .avtomenu-logo_text{
+
+        text-align: center;
+        font-weight: 500;
+      }
+    }
+
+    & .avtomenu-menuitem{
+      width: 300px;
+      height: 100%;
+      @include flexCenter;
+
+      & .avtomenu-menuitem_text{
+        @include avto-font1;
+        text-align: center;
+        font-weight: 600;
+        color: $avto-clrtext-dark;
+        position: relative;
+
+        &:after{
+          content: '';
+          position: absolute;
+          z-index: 2;
+          width: 100%;
+          height: 2px;
+          background-color: $avto-clrtext-dark;
+          top: 100%;
+          left: 0;
+        }
+      }
+    }
+
+    & .avtomenu-contacts{
+      gap: $avto_gap-mini--mobile * 1.5;
+      min-width: 160px;
+
+      & .avtomenu-contacts_tel{
+
+        & .avtomenu-contacts-text{
+         display: none;
+        }
+
+      }
+
+      & .avtomenu-contacts_icon svg{
+        @include icon--big;
+      }
+
+
+    }
+
+  }
+
+}
+
+@media screen and (max-width: 699px) {
+
+  .avtomenu{
+
+    & .avtomenu-logo{
+
+      min-width: auto;
+
+      & .avtomenu-logo_text{
+        text-align: center;
+        @include avto-fontH2;
+        margin-left: $avto_gap-mini--mobile * 0.5;
+      }
+    }
+
+    & .avtomenu-menuitem{
+      display: none !important;
+    }
+
+    & .avtomenu-contacts{
+      gap: $avto_gap-mini--mobile;
+      min-width: auto;
+
+      & .avtomenu-contacts_tel{
+        @include avto-font1b;
+
+        & .avtomenu-contacts-text{
+          display: none;
+        }
+
+        & .avtomenu-contacts_icon--mail{
+          display: none
+        }
+
+      }
+
+      & .avtomenu-contacts_icon svg{
+        @include icon--big;
+      }
+
+      & .avtomenu-contacts_telegram{
+        padding: 0 $avto-gap-mini--mobile * 2;
+
+      }
+
+
+    }
+
+
+
+  }
+
+
+}

@@ -1,0 +1,3214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомобили из Кореи под заказ в Спб | Доставка в Россиию под ключ</title>
+    <meta name="description" content="Автомобили из Кореи под заказ в Санкт-Петербурге. Доставка автомобилей в Россию под ключ"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <!--Разработка сайта - Степанов Виктор Игоревич--> 
+    <!-- Подключаем свой CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<style>
+    /* по умолчанию */
+    :root {
+        --header-background-color: #1b1b1b;
+        --header__top-bar-font-color: #fff;
+        --header__top-bar_border_bottom: ;
+        --header-font-color: #fff;
+        --header-dropdown-font-color: #fff;
+        --header__desktop-menu-background-color: #5e5d5d;
+        --hero_banner: url('images/hero_banner_bg_474747.jpg');
+        --hero-background-color: #474747;
+        --hero-font-color: #fff;
+        --hero__button-call-back-color: #fff;
+        --hero__button-call-back-font-color: #1b1b1b;
+    }
+    /* Темный дизайн + баннер по-светлее */
+    .dark_theme_2 {
+        --hero_banner: url('images/hero_banner_bg_1b1b1b.jpg');
+        --hero-background-color: #1b1b1b;
+    }
+    .white_theme {
+        --header-background-color: #fff;
+        --header__top-bar-font-color: #1b1b1b;
+        --header-font-color: #1b1b1b;
+        --header-dropdown-font-color: #fff;
+        --header__desktop-menu-background-color: #5e5d5d;
+        --hero_banner: url('images/hero_banner_bg_ffffff.jpg');
+        --hero-background-color: #fff;
+        --hero-font-color: #1b1b1b;
+        --hero__button-call-back-color: #1b1b1b;
+        --hero__button-call-back-font-color: #fff;
+    }
+    .hybrid_theme {
+        --header-background-color: #1b1b1b;
+        --header__top-bar-font-color: #fff;
+        --header-font-color: #fff;
+        --header-dropdown-font-color: #fff;
+        --header__desktop-menu-background-color: #5e5d5d;
+        --hero_banner: url('images/hero_banner_bg_ffffff.jpg');
+        --hero-background-color: #fff;
+        --hero-font-color: #1b1b1b;
+        --hero__button-call-back-color: #1b1b1b;
+        --hero__button-call-back-font-color: #fff;
+    }
+
+    /* Подключаем переменный шрифт для обычного (normal) начертания */
+/*    @font-face {
+        font-family: 'Montserrat';
+        src: url('/fonts/Montserrat-VF.woff2') format('woff2 supports variations'),
+        url('/fonts/Montserrat-VF.woff2') format('woff2-variations');
+        font-weight: 100 900; !* Это очень важно: указываем диапазон весов, который есть в шрифте *!
+        font-style: normal;
+        font-display: swap; !* Критически важно для производительности *!
+    }
+
+    !* Подключаем переменный шрифт для курсивного (italic) начертания *!
+    @font-face {
+        font-family: 'Montserrat';
+        src: url('/fonts/Montserrat-Italic-VF.woff2') format('woff2 supports variations'),
+        url('/fonts/Montserrat-Italic-VF.woff2') format('woff2-variations');
+        font-weight: 100 900; !* Диапазон весов для курсива *!
+        font-style: italic;
+        font-display: swap;
+    }*/
+
+
+    :root {
+        --bs-font-sans-serif: 'Montserrat', sans-serif;
+    }
+</style>
+
+<meta name="yandex-verification" content="6e14d5891c608c5a" />
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header__container">
+        <div class="header__top-bar">
+            <div class="header__info">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Санкт-Петербург, ул. Оптиков, 4, корп. 2</span>
+            </div>
+            <div class="header__info">
+                <i class="far fa-calendar-alt"></i>
+                <span>Пн - Сб 10:00 – 21:00 | Вс 11:00 – 20:00</span>
+            </div>
+        </div>
+        <div class="header__bottom-bar">
+            <div class="header__logo">
+                <a href="https://korea.autogolder.ru">
+                    <img src="images/logo.png" alt="Логотип" id="logo_img">
+                </a>
+            </div>
+            <div class="header__contact-desktop">
+                <div class="header__icon-circle">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="header__contact-text">
+                    <div class="header__label">Связаться с нами</div>
+                    <a href="tel:+78125658008" class="header__phone">+7 812 565-80-08</a>
+                </div>
+            </div>
+            <div class="header__buttons">
+                <a href="https://t.me/autogolder_sale" target="_blank" class="social-telegram" aria-label="Написать в Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://wa.me/message/C7G2XD6QBLIFK1" target="_blank" class="social-whatsapp" aria-label="Написать в WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <div class="header__phone-trigger">
+                    <button class="header__phone-button" aria-label="Показать номер">
+                        <i class="fas fa-phone" id="phoneIcon"></i>
+                        <i class="fas fa-times" id="closeIcon"></i>
+                    </button>
+                    <div id="phoneDropdown" class="header__dropdown">
+                        <div class="header__dropdown-content">
+                            <a href="tel:+78125658008" class="header__dropdown-phone">+7 812 565-80-08</a>
+                            <p class="header__dropdown-text">Пн - Сб 10:00 – 21:00</p>
+                            <p class="header__dropdown-text">Вс 11:00 – 20:00</p>
+                            <p class="header__dropdown-text">Санкт-Петербург, ул. Оптиков, 4, корп. 2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__mobile-section">
+                <div class="header__burger-container">
+                    <button class="header__burger-button" id="burgerButton" aria-label="Открыть меню">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <nav class="header__mobile-menu" id="mobileMenu">
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#catalog">Каталог авто</a></li>
+                            <li><a href="#credit">Кредит</a></li>
+                            <li><a href="#team">Наша команда</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__menu-container">
+        <nav class="header__desktop-menu">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#catalog">Каталог авто</a></li>
+                <li><a href="#credit">Кредит</a></li>
+                <li><a href="#team">Наша команда</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body, html {
+        width: 100%;
+        overflow-x: clip;
+        font-family: 'Montserrat', sans-serif;
+        color: #1b1b1b;
+        line-height: 1.6;
+        background-color: #F8F8F8;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .header {
+        background-color: var(--header-background-color);
+        width: 100%;
+        position: relative;
+        z-index: 10;
+    }
+
+    .header__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .header__top-bar {
+        display: flex;
+        justify-content: flex-start;
+        color: var(--header__top-bar-font-color);
+        font-size: 14px;
+        padding: 10px 0;
+        border-bottom: 1px solid #333;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .header__top-bar .header__info {
+        margin-left: 20px;
+    }
+
+    .header__top-bar .header__info i {
+        color: var(--header-font-color);
+        margin-right: 5px;
+    }
+
+    .header__bottom-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .header__mobile-section {
+        display: flex;
+        gap: 15px;
+    }
+
+    .header__logo {
+        max-width: 336px;
+        flex-shrink: 1;
+    }
+
+    @media (max-width: 767px) {
+        .header__logo {
+            width: 42%;
+        }
+        .header__bottom-bar {
+            padding: 15px 0;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .header__logo {
+            width: 42%;
+        }
+    }
+
+    .header__logo img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .header__contact-desktop {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        color: var(--header__top-bar-font-color);
+    }
+
+    .header__icon-circle {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #FC4B2A;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__icon-circle i {
+        color: #FC4B2A;
+        font-size: 16px;
+    }
+
+    .header__contact-text {
+        text-align: left;
+    }
+
+    .header__label {
+        color: #FC4B2A;
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .header__phone {
+        color: var(--header-font-color);
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .header__buttons {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .header__buttons a {
+        font-size: 40px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease;
+        border-radius: 50%;
+    }
+
+    .header__phone-trigger {
+        position: relative;
+    }
+
+    .header__phone-button {
+        background: transparent;
+        border: none;
+        padding: 10px 0;
+        min-width: 22px;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: transform 0.2s ease;
+    }
+
+    .header__phone-button:hover,
+    .header__phone-button:focus {
+        transform: scale(1.15);
+    }
+
+    .header__phone-button i {
+        color: #FC4B2A;
+        font-size: 21px;
+        transition: transform 0.2s ease;
+    }
+
+    #closeIcon {
+        display: none;
+    }
+
+    .header__dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 10px;
+        background: #2F3234;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        min-width: 280px;
+        max-width: calc(100vw - 30px);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 99999;
+        color: #fff;
+    }
+
+    .header__dropdown.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .header__dropdown-content {
+        text-align: center;
+    }
+
+    .header__dropdown-phone {
+        display: block;
+        font-size: 18px !important;
+        font-weight: 600;
+        color: var(--header-dropdown-font-color);
+        text-decoration: underline;
+        margin-bottom: 8px;
+    }
+
+    .header__dropdown-text {
+        font-size: 13px;
+        color: #fff;
+        margin: 5px 0;
+    }
+
+    .header__buttons a.social-telegram i {
+        color: #0088cc;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .header__buttons a.social-telegram:hover i {
+        color: #0088cc;
+        transform: scale(1.15);
+    }
+
+    .header__buttons a.social-whatsapp i {
+        color: #25D366;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .header__buttons a.social-whatsapp:hover i {
+        color: #25D366;
+        transform: scale(1.15);
+    }
+
+    @media (max-width: 991px) {
+        .header__top-bar,
+        .header__contact-desktop {
+            display: none !important;
+        }
+        .header__phone-trigger {
+            display: flex;
+        }
+        .header__buttons a {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .header__buttons {
+            gap: 15px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .header__phone-trigger {
+            display: none !important;
+        }
+    }
+
+    .header__menu-container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .header__desktop-menu {
+        display: flex;
+        justify-content: center;
+        background-color: var(--header__desktop-menu-background-color);
+        padding: 12px 0;
+    }
+
+    .header__desktop-menu ul {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+    }
+
+    .header__desktop-menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .header__desktop-menu a:hover {
+        color: #FC4B2A;
+    }
+
+    .header__burger-container {
+        display: none;
+        position: relative;
+    }
+
+    .header__burger-button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__burger-button i {
+        color: #FC4B2A;
+        font-size: 24px;
+    }
+
+    .header__mobile-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #2F3234;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 10000;
+    }
+
+    .header__mobile-menu.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .header__mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header__mobile-menu a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        border-bottom: 1px solid #444;
+    }
+
+    .header__mobile-menu a:hover {
+        color: #FC4B2A;
+    }
+
+    @media (max-width: 991px) {
+        .header__desktop-menu {
+            display: none;
+        }
+        .header__burger-container {
+            display: flex;
+        }
+        .header__contact-desktop {
+            display: none !important;
+        }
+        .header__phone-trigger {
+            display: flex;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .header__burger-container,
+        .header__mobile-menu {
+            display: none !important;
+        }
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdown = document.getElementById('phoneDropdown');
+        const button = document.querySelector('.header__phone-button');
+        const phoneIcon = document.getElementById('phoneIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        if (!dropdown || !button || !phoneIcon || !closeIcon) {
+            console.error('Ошибка: один из элементов не найден');
+            return;
+        }
+
+        button.addEventListener('click', function (e) {
+            const isOpen = dropdown.classList.contains('show');
+            if (isOpen) {
+                dropdown.classList.remove('show');
+                phoneIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            } else {
+                dropdown.classList.add('show');
+                phoneIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                    phoneIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                }
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                if (dropdown.classList.contains('show')) {
+                    dropdown.classList.remove('show');
+                    phoneIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                }
+            }
+        });
+
+        const burgerButton = document.getElementById('burgerButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (!burgerButton || !mobileMenu) {
+            console.error('Ошибка: бургер или меню не найдено');
+            return;
+        }
+
+        burgerButton.addEventListener('click', function (e) {
+            mobileMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!burgerButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('show');
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                mobileMenu.classList.remove('show');
+            }
+        });
+    });
+</script>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero__container">
+        <div class="hero__content">
+            <h1 class="hero__title">Автомобили <span class="hero__red-accent">из Кореи</span> со скидкой до 37% на доставку в СПб</h1>
+            <ul class="hero__features">
+                <li><i class="fas fa-shipping-fast"></i> Доставим за 30 рабочих дней</li>
+                <li><i class="fas fa-credit-card"></i> Возможность покупки в кредит</li>
+                <li><i class="fas fa-camera"></i> Фото и видео отчеты на всех этапах</li>
+                <li><i class="fas fa-money-bill-wave"></i> Гарантируем возвратный депозит</li>
+                <li><i class="fas fa-shield-alt"></i> Все риски застрахованы на 100%</li>
+                <li><i class="fas fa-passport"></i> Растаможим и оформим ЭПТС</li>
+                <li><i class="fas fa-dollar-sign"></i> Фиксированная комиссия за работу без накруток</li>
+                <li><i class="fas fa-users"></i> Работаем с физическими и юридическими лицами</li>
+            </ul>
+            <a href="/services" class="hero__button">Каталог автомобилей</a>
+            <button type="button" class="hero__button--callback request-btn">Получить расчет цены</button>
+            <a href="https://t.me/autogolder_sale" class="hero__button--tg">Написать в Telegram</a>
+            <a href="https://wa.me/message/C7G2XD6QBLIFK1" class="hero__button--wa">Написать в WhatsApp</a>
+        </div>
+    </div>
+</section>
+<style>
+    .hero {
+        background: var(--hero_banner) center top no-repeat;
+        background-size: cover;
+        padding: 100px 20px;
+        text-align: left;
+    }
+
+    .hero__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 15px;
+        min-height: 400px;
+    }
+
+    .hero__content {
+        width: 55%;
+    }
+
+    .hero__title {
+        font-size: 2.0rem;
+        font-weight: 700;
+        color: var(--hero-font-color);
+        margin-bottom: 20px;
+    }
+
+    .hero__red-accent {
+        color: #FC4B2A;
+    }
+
+    .hero__features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+    }
+
+    .hero__features li {
+        color: var(--hero-font-color);
+        margin-bottom: 12px;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero__features i {
+        color: #FC4B2A;
+        font-size: 1.1rem;
+        min-width: 20px;
+        text-align: center;
+    }
+
+    .hero__button--callback,
+    .hero__button--callback:link,
+    .hero__button--callback:visited {
+        /* твои стили */
+        display: inline-block;
+        min-width: 260px;
+        margin: 0.5rem;
+        background-color: #FC4B2A;
+        color: white;
+        padding: 1.1rem 2rem;
+        border: none; /* ← важно! */
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .hero__button--callback:hover {
+        background-color: #e04225;
+    }
+
+    .hero__button {
+        display: inline-block;
+        min-width: 260px;
+        margin: 0.5rem;
+        background-color: var(--hero__button-call-back-color);
+        color: var(--hero__button-call-back-font-color);
+        padding: 14px 30px;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .hero__button:hover {
+        background-color: #bbbbbb;
+    }
+
+    .hero__button--tg {
+        display: inline-block;
+        min-width: 260px;
+        margin: 0.5rem;
+        background-color: #00A8E7;
+        color: #FFF;
+        padding: 14px 30px;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .hero__button--tg:hover {
+        background-color: #0096cc;
+    }
+
+    .hero__button--wa {
+        display: inline-block;
+        min-width: 260px;
+        margin: 0.5rem;
+        background-color: #25D366;
+        color: #FFF;
+        padding: 14px 30px;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .hero__button--wa:hover {
+        background-color: #20b85c;
+    }
+
+    @media (max-width: 1024px) {
+        .hero {
+            background: none;
+            background-color: var(--hero-background-color);
+            padding: 80px 20px 0;
+        }
+        .hero__content {
+            width: 80%;
+        }
+        .hero__title {
+            font-size: 2.0rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .hero {
+            padding: 60px 0;
+        }
+        .hero__container {
+            padding: 0 15px;
+        }
+        .hero__content {
+            width: 100%;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .hero__title {
+            font-size: 1.7rem;
+        }
+        .hero__features li {
+            font-size: 0.9rem;
+            gap: 8px;
+        }
+        .hero__features i {
+            min-width: 18px;
+            font-size: 1rem;
+        }
+    }
+</style>
+
+
+<!-- CATALOG SECTION -->
+<section class="catalog" id="catalog">
+    <div class="catalog__container">
+        <h2 class="catalog__title">Каталог автомобилей из Кореи</h2>
+    </div>
+</section>
+<style>
+    .catalog {
+        padding: 80px 20px;
+        background-color: #f8f8f8;
+        color: #1b1b1b;
+        margin-top: 80px;
+    }
+    .catalog__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .catalog__title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+        color: #1b1b1b;
+        margin-bottom: 2rem;
+    }
+    @media (max-width: 767px) {
+        .catalog {
+            padding: 60px 15px;
+            margin-top: 60px;
+        }
+        .catalog__title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+</style>
+
+
+<!-- CREDIT SECTION -->
+<section class="credit" id="credit">
+    <div class="credit__container">
+        <div class="credit__wrapper">
+            <div class="credit__content">
+                <h2 class="credit__title">Автомобиль на заказ можно купить <span class="credit__red-accent">в кредит:</span></h2>
+                <div class="credit__offer">
+                    <ul class="credit__highlight__list">
+                        <li><i class="fas fa-percent"></i> Первоначальный взнос — от 0%</li>
+                        <li><i class="fas fa-calendar-alt"></i> Срок кредита — до 8 лет</li>
+                    </ul>
+                    <p class="credit__text">
+                        В тело кредита можно включить все сопутствующие расходы:
+                    </p>
+                    <ul class="credit__list">
+                        <li><i class="fas fa-car"></i>Стоимость автомобиля за границей</li>
+                        <li><i class="fas fa-truck"></i>Оплата доставки до границы РФ</li>
+                        <li><i class="fas fa-handshake"></i>Брокерские услуги по подбору и оформлению</li>
+                    </ul>
+                    <p class="credit__note">
+                        Наши партнёры — ведущие банки России. Подберём для вас индивидуальные условия и поможем с оформлением.
+                    </p>
+                    <p class="credit__button">
+                        <button type="button" class="credit__button--callback request-btn">Получить расчет цены</button>
+                    </p>
+                </div>
+            </div>
+            <div class="credit__image-wrapper">
+                <img src="images/credit.jpg" alt="Покупка автомобиля в кредит в Автогольдер" class="credit__image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+     
+    .credit {
+        background-color: #474747;
+        color: #fff;
+        padding: 80px 20px;
+        margin-top: 80px;
+    }
+
+    .credit__container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .credit__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 5%;
+    }
+
+    .credit__content {
+        flex: 1 1 60%;
+    }
+
+    .credit__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #fff;
+    }
+
+    .credit__highlight__list {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .credit__highlight__list li {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .credit__highlight__list i {
+        color: #FC4B2A;
+        min-width: 20px;
+        margin-top: 3px;
+    }
+
+    .credit__text {
+        font-size: 1.0rem;
+        color: #fff;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    .credit__list {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .credit__list li {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .credit__list i {
+        color: #FC4B2A;
+        min-width: 20px;
+        margin-top: 3px;
+    }
+
+    .credit__note {
+        font-size: 0.95rem;
+        color: #fff;
+        font-style: italic;
+        margin-top: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .credit__image-wrapper {
+        flex: 1 1 40%;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .credit__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .credit__red-accent {
+        color: #FC4B2A;
+    }
+
+    .credit__button {
+        margin: 2rem 0 0 0;
+    }
+
+    .credit__button--callback,
+    .credit__button--callback:link,
+    .credit__button--callback:visited {
+        /* твои стили */
+        display: inline-block;
+        min-width: 260px;
+        margin: 0;
+        background-color: #FC4B2A;
+        color: white;
+        padding: 1rem 2rem;
+        border: none; /* ← важно! */
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .credit__button--callback:hover {
+        background-color: #e04225;
+    }
+
+    @media (max-width: 767px) {
+        .credit {
+            margin-top: 60px;
+            padding: 15px 15px;
+        }
+
+        .credit__wrapper {
+            flex-direction: column;
+        }
+
+        .credit__content {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .credit__image-wrapper {
+            width: 100%;
+        }
+
+        .credit__title {
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+         .credit__text {
+            margin-top: 3rem;
+            text-align: center;
+         }
+
+         .credit__note {
+            margin-top: 3rem;
+            text-align: center;
+         }
+
+        .credit__highlight__list {
+            font-size: 0.90rem;
+        }
+
+        .credit__list li {
+            font-size: 0.90rem;
+        }
+
+        .credit__button {
+            margin: 1rem 0 0 0;
+            text-align: center;
+        }
+    }
+</style>
+
+
+<!-- LAST_CARS SECTION -->
+<section class="last_cars">
+    <div class="last_cars__container">
+        <h2 class="last_cars__title">Последние выдачи авто нашим клиентам:</h2>
+
+        <!--<p class="last_cars__intro">
+         </p>-->
+
+        <!-- КАРУСЕЛЬ ОТЗЫВОВ -->
+        <div class="last_cars__carousel-wrapper">
+            <!-- Управление (стрелки выше карточек) -->
+            <div class="last_cars__controls--top">
+                <button class="last_cars__prev" aria-label="Предыдущий отзыв" id="last_cars__prev">
+                    <i class="fas fa-angle-left"></i>
+                </button>
+                <button class="last_cars__next" aria-label="Следующий отзыв" id="last_cars__next">
+                    <i class="fas fa-angle-right"></i>
+                </button>
+            </div>
+
+            <!-- Карусель -->
+            <div class="last_cars__carousel">
+                <!-- Отзыв 1 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/1.jpg" alt="Mitsubishi Outlander для Ирины Олеговны">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">Mitsubishi Outlander для Ирины Олеговны</h4>
+                            <p>Поздравляем Ирину Олеговну с приобретением нового автомобиля! 🥳🎉. Желаем приятной эксплуатации автомобиля и ровной дороги! Пусть машина радует Вас долгие годы! 🍀 Нашли, подобрали, заказали, привезли, дополнительное оборудование, по запросу клиента, поставили и готовую машину клиенту отдали!🤩</p>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/2.jpg" alt="Mercedes G-Class для Владимира">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">Mercedes G-Class для Владимира</h4>
+                            <p>Поздравляем Владимира с приобретением!🎉Желаем ярких эмоций и приятных впечатлений от автомобиля! 🤩 Такой же и другие автомобили Вы можете заказать у нас! 😎</p>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Отзыв 3 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/3.jpg" alt="Suzuki Ertiga для Андрея и его супруги">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">Suzuki Ertiga для Андрея и его супруги</h4>
+                            <p>Поздравляем Андрея с супругой, с приобретением надёжного семейного автомобиля! 🥳 Автомобиль прибыл под заказ, по этому благодарим наших клиентов за доверие нашей команде "Автогольдер"! 😎
+Хорошие автомобили Вы можете приобрести у нас, а если подходящего автомобиля не нашлось - то мы привезём автомобиль специально для Вас! 😌</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 4 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/4.jpg" alt="Mercedes GLC для Анатолия и Адольфины">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">Mercedes GLC для Анатолия и Адольфины</h4>
+                             <p>Поздравляем Анатолия и его жену Адольфину с приобретением нового, шикарного автомобиля! Пусть он радует Вас долгие годы! 🎉 Желаем меньше пробок и всегда зеленого света светофора!🍀</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 5 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/5.jpg" alt="Kia Sorento для Владимира и его семьи">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">Kia Sorento для Владимира и его семьи</h4>
+                             <p>Поздравляем Владимира с приобретением прекрасного семейного автомобиля!🎉 Автомобиль приехал под заказ из Кореи и уже радует своего нового владельца!😊 Желаем приятной эксплуатации и удачи на дорогах!🍀🎉</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 6 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/6.jpg" alt="Genesis GV70 для Евгении">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">Genesis GV70 для Евгении</h4>
+                             <p>Поздравляем Евгению с приобретением люксового внедорожника Genesis GV70! 🥳 Этот автомобиль был выбран по опциям и параметрам нашего клиента и заказан из Кореи. 😎 P.S. Пока Вы думаете о заказе автомобиля, другие забирают самые интересные варианты! 😉</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 7 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/7.jpg" alt="Toyota RAV4 для Ын">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">Toyota RAV4 для Ын</h4>
+                             <p>Поздравляем Ын с приобретением Toyota RAV4 2024 года! В максимальной комплектации на заказ! 🛞 Желаем счастливого пути и приятного исследования неизведанных дорог! 🎉</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 8 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/8.jpg" alt="Porsche Macan S для Елены">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">Porsche Macan S для Елены</h4>
+                             <p>Поздравляем Елену с отличным приобретением эксклюзивного Porsche Macan S 2024 г.в. серого цвета, в матовой броне плёнке. 😎 Свободных и только прямых дорог! 
+P.S. А мы напоминаем, что если у нас в наличии нет того автомобиля, который Вы хотите - мы можем привезти под заказ из Европы, Азии и Кореи! 😊</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 9 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/9.jpg" alt="Mitsubishi ASX для Татьяны">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">Mitsubishi ASX для Татьяны</h4>
+                             <p>Поздравляем Татьяну с покупкой нового надёжного автомобиля! 🥳🚗👍 Mitsubishi ASX не обычного цвета отправляется в Выборг! 🛷 Желаем всегда лёгкой дороги и благоприятных условий на пути! 🎉😊</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 10 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/10.jpg" alt="Mitsubishi ASX для Натальи">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">Mitsubishi ASX для Натальи</h4>
+                             <p>Поздравляем Наталью, с приобретением автомобиля мечты! 🥳 Кстати, этот потрясающий Mitsubishi ASX с полным приводом, в максимальной комплектацие, мы везли под заказ. Пусть автомобиль радует Вас каждый день! 😊Спасибо Вам за доверие! ❤️</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 11 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/11.jpg" alt="Mercedes-Benz GLE Coupe 350 de для Николая">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">Mercedes-Benz GLE Coupe 350 de для Николая</h4>
+                             <p>Поздравляем Николая из Казани с приобретением шикарного Mercedes-Benz GLE Coupe 350 de! 🛞🎉 Желаем получить максимум эмоций от автомобиля, а так же ровных и быстрых дорог!😎 Мы напоминаем, что мы можем привезти для Вас любой автомобиль!😊</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 12 -->
+                <div class="last_cars__slide">
+                    <div class="last_cars__card">
+                        <div class="last_cars__image">
+                            <img src="images/last_cars/12.jpg" alt="LiXiang L6 Ultra для Романа">
+                        </div>
+                        <div class="last_cars__content">
+                            <h4 class="last_cars__client-name">LiXiang L6 Ultra для Романа</h4>
+                             <p>Поздравляем Романа с приобретением прекрасного гибридного автомобиля LiXiang L6 Ultra! 🎉 Желаем, чтобы каждый ваш путь был безопасным и приятным! Благодарим за доверие!🎉</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    
+    
+    /* === LAST_CARS SECTION === */
+    .last_cars {
+        padding: 80px 20px 0;
+        background-color: #f8f8f8;
+        color: #1b1b1b;
+    }
+
+    .last_cars__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .last_cars__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: var(--header-background-color, #1b1b1b);
+    }
+
+    .last_cars__intro {
+        font-size: 1rem;
+        color: #555;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 1rem;
+        line-height: 1.6;
+    }
+
+    .last_cars__links a {
+        color: #FC4B2A;
+        text-decoration: none;
+        margin: 0 0.5em;
+    }
+
+    .last_cars__links a:hover {
+        text-decoration: underline;
+    }
+
+    /* === КАРУСЕЛЬ И УПРАВЛЕНИЕ === */
+    .last_cars__carousel-wrapper {
+        position: relative;
+        min-height: 0px;
+        overflow: hidden; /* ← ОБРЕЗАЕМ ВСЁ, ЧТО ВЫХОДИТ ЗА ГРАНИЦЫ */
+        width: 100%; /* ← явно задаём ширину */
+    }
+
+   .last_cars__controls--top {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px; /* ← отступ от краёв экрана */
+        transform: translateY(-50%); /* ← центрируем по вертикали */
+        z-index: 10;
+        pointer-events: none; /* ← чтобы не мешали кликам по карточке */
+    }
+
+    .last_cars__prev,
+    .last_cars__next {
+        pointer-events: auto; /* ← но сами кнопки должны реагировать на клик */
+        background-color: rgba(252, 75, 42, 0.2); /* ← полупрозрачный фон */
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .last_cars__prev:hover,
+    .last_cars__next:hover {
+        background-color: rgba(252, 75, 42, 1); /* ← при наведении — непрозрачный */
+    }
+
+    /* === КАРУСЕЛЬ (НОВАЯ РЕАЛИЗАЦИЯ) === */
+    .last_cars__carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%; /* ← важно: ширина контейнера слайдов = 100% обёртки */
+        height: 100%;
+    }
+    
+    .last_cars__slide {
+        min-width: 100%; /* ← каждый слайд — ширина 100% от carousel */
+        width: 100%;     /* ← явно задаём, чтобы не было неопределённости */
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+    }
+
+    /* === ВНУТРЕННЯЯ КАРТОЧКА === */
+    .last_cars__card {
+        background: #fff;
+        border-radius: 8px;
+        padding: 1.5rem;
+        display: flex;
+        gap: 1.5em;
+        align-items: flex-start;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        max-width: 1140px; /* ← ограничиваем ширину карточки, чтобы не растягивалась */
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    /* ФОТО */
+    .last_cars__image {
+        flex: 1 1 40%;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .last_cars__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* ТЕКСТ */
+    .last_cars__content {
+        flex: 1 1 60%;
+    }
+
+    .last_cars__client-name {
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #1b1b1b;
+        margin: 0 0 0.5rem 0;
+    }
+
+    .last_cars__content p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        margin: 0 0 0.5rem 0;
+    }
+
+
+    /* === АДАПТИВНОСТЬ === */
+    @media (max-width: 767px) {
+        .last_cars {
+            padding: 60px 15px 0px;
+        }
+
+        .last_cars__carousel-wrapper {
+            min-height: 0px;
+        }
+
+        .last_cars__carousel {
+            min-height: 0px;
+        }
+
+        .last_cars__title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .last_cars__intro,
+        .last_cars__links {
+            font-size: 0.95rem;
+        }
+
+        .last_cars__card {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .last_cars__image {
+            width: 100%;
+        }
+
+        .last_cars__content {
+            margin-top: 1rem;
+        }
+
+        /* Управление на мобилке */
+       .last_cars__controls--top {
+            padding: 0 10px; /* чуть меньше отступ на мобильных */
+            top: 50%;
+            transform: translateY(-50%);
+            justify-content: space-between;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.querySelector('.last_cars__carousel');
+        const slides = document.querySelectorAll('.last_cars__slide');
+        const prevBtn = document.getElementById('last_cars__prev');
+        const nextBtn = document.getElementById('last_cars__next');
+
+        if (!slides.length || !carousel || !prevBtn || !nextBtn) {
+            console.warn('Не хватает элементов для инициализации карусели');
+            return;
+        }
+
+        let currentIndex = 0;
+        const slideCount = slides.length;
+        let autoSlideInterval; // ← Сохраняем ID интервала
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // Функция для сброса и перезапуска автопрокрутки
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval); // ← Очищаем старый интервал
+            autoSlideInterval = setInterval(() => {
+                nextBtn.click();
+            }, 8000); // ← Запускаем заново
+        }
+
+        // Показываем первый слайд
+        updateCarousel();
+        resetAutoSlide(); // ← Запускаем автопрокрутку впервые
+
+        // Обработчик для кнопки "Назад"
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+            updateCarousel();
+            resetAutoSlide(); // ← Сброс + перезапуск таймера
+        });
+
+        // Обработчик для кнопки "Вперёд"
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slideCount;
+            updateCarousel();
+            resetAutoSlide(); // ← Сброс + перезапуск таймера
+        });
+
+        // === СВАЙП НА МОБИЛЬНЫХ ===
+        let startX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        carousel.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    nextBtn.click(); // свайп влево
+                } else {
+                    prevBtn.click(); // свайп вправо
+                }
+                resetAutoSlide(); // ← Важно! Сброс при свайпе
+            }
+        });
+
+        // === ОПЦИОНАЛЬНО: пауза при наведении (десктоп) ===
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            resetAutoSlide();
+        });
+    });
+</script>
+
+
+<!-- TEAM SECTION -->
+<section class="team" id="team">
+    <div class="team__container">
+        <h2 class="team__title">Наша команда</h2>
+        <p class="team__intro">Профессионалы, которые помогут Вам найти и доставить автомобиль вашей мечты</p>
+        <div class="team__grid">
+            
+            <!-- Карточка 1 -->
+            <div class="team__card">
+                <div class="team__image-wrapper">
+                    <img src="images/team/Павел_Капелькин.jpg" alt="Павел Капелькин" class="team__image">
+                </div>
+                <div class="team__info">
+                    <h3 class="team__name">Павел Капелькин</h3>
+                    <p class="team__position">Генеральный директор</p>
+                    <!--<div class="team__contacts">
+                        <a href="tel:+78125658008" class="team__contact"><i class="fas fa-phone"></i> +7 812 565-80-08</a>
+                        <a href="mailto:manager@autogolder.ru" class="team__contact"><i class="fas fa-envelope"></i> manager@autogolder.ru</a>
+                    </div>-->
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="team__card">
+                <div class="team__image-wrapper">
+                    <img src="images/team/Валерий_Крайнов.jpg" alt="Валерий Крайнов" class="team__image">
+                </div>
+                <div class="team__info">
+                    <h3 class="team__name">Валерий Крайнов</h3>
+                    <p class="team__position">Менеджер по работе с клиентами</p>
+                    <!--<div class="team__contacts">
+                        <a href="tel:+78125658008" class="team__contact"><i class="fas fa-phone"></i> +7 812 565-80-08</a>
+                        <a href="mailto:manager@autogolder.ru" class="team__contact"><i class="fas fa-envelope"></i> manager@autogolder.ru</a>
+                    </div>-->
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="team__card">
+                <div class="team__image-wrapper">
+                    <img src="images/team/Александр_Назаров.jpg" alt="Александр Назаров" class="team__image">
+                </div>
+                <div class="team__info">
+                    <h3 class="team__name">Александр Назаров</h3>
+                    <p class="team__position">Менеджер по работе с клиентами</p>
+                    <!--<div class="team__contacts">
+                        <a href="tel:+78125658008" class="team__contact"><i class="fas fa-phone"></i> +7 812 565-80-08</a>
+                        <a href="mailto:manager@autogolder.ru" class="team__contact"><i class="fas fa-envelope"></i> manager@autogolder.ru</a>
+                    </div>-->
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="team__card">
+                <div class="team__image-wrapper">
+                    <img src="images/team/Михаил_Арунашвили.jpg" alt="Михаил Арунашвили" class="team__image">
+                </div>
+                <div class="team__info">
+                    <h3 class="team__name">Михаил Арунашвили</h3>
+                    <p class="team__position">Менеджер по работе с клиентами</p>
+                    <!--<div class="team__contacts">
+                        <a href="tel:+78125658008" class="team__contact"><i class="fas fa-phone"></i> +7 812 565-80-08</a>
+                        <a href="mailto:manager@autogolder.ru" class="team__contact"><i class="fas fa-envelope"></i> manager@autogolder.ru</a>
+                    </div>-->
+                </div>
+            </div>
+
+             <!-- Карточка 5 -->
+            <div class="team__card">
+                <div class="team__image-wrapper">
+                    <img src="images/team/Светлана_Травина.jpg" alt="Светлана Травина" class="team__image">
+                </div>
+                <div class="team__info">
+                    <h3 class="team__name">Светлана Травина</h3>
+                    <p class="team__position">Специалист отдела кредитования</p>
+                    <!--<div class="team__contacts">
+                        <a href="tel:+78125658008" class="team__contact"><i class="fas fa-phone"></i> +7 812 565-80-08</a>
+                        <a href="mailto:manager@autogolder.ru" class="team__contact"><i class="fas fa-envelope"></i> manager@autogolder.ru</a>
+                    </div>-->
+                </div>
+            </div>
+
+             <!-- Карточка 6 -->
+            <div class="team__card">
+                <div class="team__image-wrapper">
+                    <img src="images/team/Дарья_Зиновьева.jpg" alt="Дарья Зиновьева" class="team__image">
+                </div>
+                <div class="team__info">
+                    <h3 class="team__name">Дарья Зиновьева</h3>
+                    <p class="team__position">Руководитель отдела маркетинга</p>
+                    <!--<div class="team__contacts">
+                        <a href="tel:+78125658008" class="team__contact"><i class="fas fa-phone"></i> +7 812 565-80-08</a>
+                        <a href="mailto:manager@autogolder.ru" class="team__contact"><i class="fas fa-envelope"></i> manager@autogolder.ru</a>
+                    </div>-->
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+
+<style>
+    .team {
+        padding: 80px 20px 0px;
+        background-color: #f7f7f7;
+        color: #1b1b1b;
+    }
+
+    .team__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .team__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        color: var(--header-background-color, #1b1b1b);
+    }
+
+    .team__intro {
+        font-size: 1rem;;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+        line-height: 1.6;
+        font-weight: 500;
+    }
+
+    .team__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .team__card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team__card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .team__image-wrapper {
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .team__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+
+    .team__card:hover .team__image {
+        transform: scale(1.05);
+    }
+
+    .team__info {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .team__name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1b1b1b;
+        margin: 0 0 0.5rem 0;
+    }
+    
+    .team__position {
+        font-size: 0.95rem;
+        color: #1b1b1b;
+        margin: 0 0 1rem 0;
+    }
+
+    .team__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .team__contact {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #1b1b1b;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: color 0.2s;
+    }
+
+    .team__contact:hover {
+        color: #FC4B2A;
+    }
+
+    .team__contact i {
+        color: #FC4B2A;
+        font-size: 1rem;
+        min-width: 16px;
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        .team {
+            padding: 60px 15px;
+        }
+
+        .team__title {
+            font-size: 1.4rem;
+        }
+
+        .team__intro {
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        /* 🔥 2 карточки в ряд на мобильных */
+        .team__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .team__image-wrapper {
+            height: 180px;
+        }
+
+        .team__info {
+            padding: 0.5rem;
+        }
+
+        .team__name {
+            font-size: 1.1rem;
+            margin-top: 0.2rem;
+        }
+
+        .team__position {
+            font-size: 0.9rem;
+        }
+
+        .team__contact {
+            font-size: 0.75rem;
+        }
+
+        .team__contact i {
+            color: #FC4B2A;
+            font-size: 0.75rem;
+            min-width: 12px;
+            text-align: center;
+        }
+    }
+</style>
+
+<!-- BOSS SECTION -->
+<section class="boss">
+    <div class="boss__container">
+        <div class="boss__wrapper">
+            <div class="boss__image-wrapper">
+                <img src="images/boss.jpg" alt="Павел Капелькин, генеральный директор АВТОГОЛЬДЕР" class="boss__image">
+            </div>
+            <div class="boss__content">
+                <blockquote class="boss__quote">
+                    <p class="boss__text">
+                        <span class="quote-mark">«</span> Мы в АВТОГОЛЬДЕР уже долгое время занимаемся импортом автомобилей в Россию. В основе нашей работы – огромный опыт и профессионализм сотрудников, честность и открытость со своими клиентами.
+                        Если Вы заинтересованы в покупке автомобиля с доставкой из-за рубежа “под ключ” просто свяжитесь с нами по телефону или с помощью формы обратной связи на сайте. Мы проконсультируем Вас по всем вопросам и произведем расчет стоимости автомобиля с учетом доставки и уплаты таможенных платежей и утилизационного сбора. <span class="quote-mark">»</span>
+                    </p>
+                    <footer class="boss__author">
+                        <b>Павел Капелькин</b>
+                        <span>генеральный директор АВТОГОЛЬДЕР</span>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    
+    .boss {
+        background-color: #474747;
+        color: #fff;
+        padding: 80px 20px;
+        margin-top:80px;
+    }
+
+    .boss__container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .boss__wrapper {
+        display: flex;
+        align-items: flex-start;
+        gap: 5%;
+    }
+
+    .boss__image-wrapper {
+        flex: 1 1 50%;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .boss__image {
+        width: 100%;
+        height: fit-content;
+        object-fit: cover;
+        display: block;
+    }
+
+    .boss__content {
+        flex: 1 1 40%;
+    }
+
+    .boss__quote {
+        font-style: normal;
+    }
+
+    .boss__text {
+        font-size: 1.0rem;
+        color: #ddd;
+        margin-bottom: 1.5rem;
+    }
+
+    .quote-mark {
+        color: #FC4B2A;
+        font-size: 1.5rem;
+        font-weight: bold;
+        vertical-align: -0.1rem;
+        line-height: 1;
+    }
+
+    .boss__author {
+        text-align: right;
+    }
+
+    .boss__author b {
+        color: #fff;
+        display: block;
+        font-size: 1.2rem;
+        margin-right: 2rem;
+    }
+
+    .boss__author span {
+        color: #fff;
+        display: block;
+        margin-right: 2rem;
+    }
+
+    @media (max-width: 767px) {
+        .boss {
+            margin-top: 60px;
+            padding: 15px 15px;
+        }
+        .boss__wrapper {
+            flex-direction: column;
+
+        }
+        .boss__image-wrapper {
+             width: 100%;
+        }
+
+        .boss__content {
+            padding-top: 1rem;
+            width: 100%;
+        }
+
+        .boss__text {
+            font-size: 0.95rem;
+            color: #ddd;
+            margin-bottom: 1.5rem;
+        }
+
+        .boss__author b,
+        .boss__author span {
+            margin-right: 0;
+        }
+    }
+</style>
+
+
+
+
+<!-- FEEDBACK SECTION -->
+<section class="feedback">
+    <div class="feedback__container">
+        <h2 class="feedback__title">Отзывы о нас</h2>
+
+        <p class="feedback__intro">
+            Мы представлены на автомобильном рынке Санкт-Петербурга уже более 10 лет, за которые заработали репутацию надежной компании. С отзывами о нас Вы можете ознакомиться на страницах таких интернет-ресурсов, как:
+        </p>
+
+        <p class="feedback__links">
+            <a href="https://yandex.ru/maps/org/avtogolder/176711063098/reviews/?ll=30.249177%2C59.995471&z=17" target="_blank">Яндекс</a> |
+            <a href="https://www.avito.ru/brands/autogolder888/all?ysclid=m9eb3mk7to94322668&sellerId=376d972e50bbebd1f33a99784a1e1a4c" target="_blank">Авито</a> |
+            <a href="https://2gis.ru/spb/firm/70000001069603108/tab/reviews" target="_blank">2ГИС</a> |
+            <a href="https://zoon.ru/spb/autoservice/avtosalon_avtogolder/?ysclid=m9eblmuw3i488204859" target="_blank">ZOON</a>
+        </p>
+        
+        <p class="ya__label"><iframe src="https://yandex.ru/sprav/widget/rating-badge/176711063098?type=rating" width="150" height="50" frameborder="0"></iframe></p>
+
+        <!-- КАРУСЕЛЬ ОТЗЫВОВ -->
+        <div class="feedback__carousel-wrapper">
+            <!-- Управление (стрелки выше карточек) -->
+            <div class="feedback__controls--top">
+                <button class="feedback__prev" aria-label="Предыдущий отзыв" id="feedback__prev">
+                    <i class="fas fa-angle-left"></i>
+                </button>
+                <button class="feedback__next" aria-label="Следующий отзыв" id="feedback__next">
+                    <i class="fas fa-angle-right"></i>
+                </button>
+            </div>
+
+            <!-- Карусель -->
+            <div class="feedback__carousel">
+                <!-- Отзыв 1 -->
+                <div class="feedback__slide">
+                    <div class="feedback__card">
+                        <div class="feedback__image">
+                            <img src="images/feedback/feedback-1.jpg" alt="Фотография Андрея Шириханова">
+                        </div>
+                        <div class="feedback__content">
+                            <h4 class="feedback__client-name">Андрей Шириханов (купил Toyota Corolla)</h4>
+                            <p>Покупал здесь Corolla. Работа менеджера Александра и команды по страхованию на высоте. Всегда на связи, даже в свой выходной позвонят, напишут и не оставят без внимания. Клиентоориентированность — однозначно большой плюс автосалона. Вас всегда встретят с улыбкой и проконсультируют по всем вопросам.</p>
+                            <p class="feedback__source"><a href="https://yandex.ru/maps/org/176711063098/reviews?reviews%5BpublicId%5D=a8de837hu91mmp89eywxavn2g0&si=j482weftmxkvf21bm6065t8p7w&utm_source=review" target="_blank">Оригинал отзыва</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 2 -->
+                <div class="feedback__slide">
+                    <div class="feedback__card">
+                        <div class="feedback__image">
+                            <img src="images/feedback/feedback-2.jpg" alt="Фотография Алексея Архарова">
+                        </div>
+                        <div class="feedback__content">
+                            <h4 class="feedback__client-name">Алексей Архаров (купил Mitsubishi Outlander)</h4>
+                            <p>Приобрели Outlander в Автогольдер! Я не ожидал такого подхода к клиенту. Отдельное спасибо хотел бы сказать менеджеру Александру — выслушал все пожелания и решил их за 24 часа. За тонировали и поставили GSM сигнализацию последнего поколения (бонусом за trade-in). Дружный, слаженный коллектив. Только положительные эмоции. Никаких навязанных услуг. Вчера зашел спросить — сегодня на новой машине уехал. В салоне чистота, порядок, чай, кофе. Спасибо всему коллективу «Автогольдер», вы делаете людей счастливыми без заморочек.</p>
+                            <p class="feedback__source"><a href="https://yandex.ru/maps/org/176711063098/reviews?reviews%5BpublicId%5D=94yy5fb03rqgkm2g5td7dm6gkg&si=j482weftmxkvf21bm6065t8p7w&utm_source=review" target="_blank">Оригинал отзыва</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Отзыв 3 -->
+                <div class="feedback__slide">
+                    <div class="feedback__card">
+                        <div class="feedback__image">
+                            <img src="images/feedback/feedback-4.jpg" alt="Фотография Михаила Волкова">
+                        </div>
+                        <div class="feedback__content">
+                            <h4 class="feedback__client-name">Михаил Волков (купил Skoda Kodiaq)</h4>
+                            <p>Отличный автосалон. Персонал предлагает отличные машины за хороший прайс. Никаких навязанных услуг. На все сложные вопросы по поводу автомобиля были даны честные ответы. Остались только положительные впечатления от покупки нового автомобиля.</p>
+                            <p class="feedback__source"><a href="https://yandex.ru/maps/org/176711063098/reviews?reviews%5BpublicId%5D=f12wyykgydxcfu8zxbttgj15ec&si=b06znh6v8ub9g6e0rr8uybdjv8&utm_source=review" target="_blank">Оригинал отзыва</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* === FEEDBACK SECTION === */
+    .feedback {
+        padding: 80px 20px 0;
+        background-color: #f8f8f8;
+        color: #1b1b1b;
+    }
+
+    .feedback__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .feedback__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: var(--header-background-color, #1b1b1b);
+    }
+
+    .feedback__intro {
+        font-size: 1rem;
+        color: #555;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 1rem;
+        line-height: 1.6;
+    }
+
+    .feedback__links {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .ya__label {
+        text-align: center;
+        padding-left: 20px;
+        margin-bottom: 2rem;
+    }
+
+    .feedback__links a {
+        color: #FC4B2A;
+        text-decoration: none;
+        margin: 0 0.5em;
+    }
+
+    .feedback__links a:hover {
+        text-decoration: underline;
+    }
+
+    /* === КАРУСЕЛЬ И УПРАВЛЕНИЕ === */
+    .feedback__carousel-wrapper {
+        position: relative;
+        min-height: 0px;
+        overflow: hidden; /* ← ОБРЕЗАЕМ ВСЁ, ЧТО ВЫХОДИТ ЗА ГРАНИЦЫ */
+        width: 100%; /* ← явно задаём ширину */
+    }
+
+   .feedback__controls--top {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px; /* ← отступ от краёв экрана */
+        transform: translateY(-50%); /* ← центрируем по вертикали */
+        z-index: 10;
+        pointer-events: none; /* ← чтобы не мешали кликам по карточке */
+    }
+
+    .feedback__prev,
+    .feedback__next {
+        pointer-events: auto; /* ← но сами кнопки должны реагировать на клик */
+        background-color: rgba(252, 75, 42, 0.2); /* ← полупрозрачный фон */
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .feedback__prev:hover,
+    .feedback__next:hover {
+        background-color: rgba(252, 75, 42, 1); /* ← при наведении — непрозрачный */
+    }
+
+    /* === КАРУСЕЛЬ (НОВАЯ РЕАЛИЗАЦИЯ) === */
+    .feedback__carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%; /* ← важно: ширина контейнера слайдов = 100% обёртки */
+        height: 100%;
+    }
+    
+    .feedback__slide {
+        min-width: 100%; /* ← каждый слайд — ширина 100% от carousel */
+        width: 100%;     /* ← явно задаём, чтобы не было неопределённости */
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+    }
+
+    /* === ВНУТРЕННЯЯ КАРТОЧКА === */
+    .feedback__card {
+        background: #fff;
+        border-radius: 8px;
+        padding: 1.5rem;
+        display: flex;
+        gap: 1.5em;
+        align-items: flex-start;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        max-width: 1140px; /* ← ограничиваем ширину карточки, чтобы не растягивалась */
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    /* ФОТО */
+    .feedback__image {
+        flex: 1 1 40%;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .feedback__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* ТЕКСТ */
+    .feedback__content {
+        flex: 1 1 60%;
+    }
+
+    .feedback__client-name {
+        font-size: 1.1em;
+        font-weight: 600;
+        color: #1b1b1b;
+        margin: 0 0 0.5em 0;
+    }
+
+    .feedback__content p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        margin: 0 0 0.5em 0;
+    }
+
+    .feedback__source {
+        text-align: right;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .feedback__source a {
+        color: #FC4B2A;
+        text-decoration: none;
+        font-style: italic;
+    }
+
+    .feedback__source a:hover {
+        text-decoration: underline;
+    }
+
+    /* === АДАПТИВНОСТЬ === */
+    @media (max-width: 767px) {
+        .feedback {
+            padding: 60px 15px; 0;
+        }
+
+        .feedback__carousel-wrapper {
+            min-height: 0px;
+        }
+
+        .feedback__carousel {
+            min-height: 0px;
+        }
+
+        .feedback__title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .feedback__intro,
+        .feedback__links {
+            font-size: 0.95rem;
+        }
+
+        .feedback__card {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .feedback__image {
+            width: 100%;
+        }
+
+        .feedback__content {
+            margin-top: 1rem;
+        }
+
+        .feedback__source {
+            text-align: center;
+        }
+
+        /* Управление на мобилке */
+       .feedback__controls--top {
+            padding: 0 10px; /* чуть меньше отступ на мобильных */
+            top: 50%;
+            transform: translateY(-50%);
+            justify-content: space-between;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.querySelector('.feedback__carousel');
+        const slides = document.querySelectorAll('.feedback__slide');
+        const prevBtn = document.getElementById('feedback__prev');
+        const nextBtn = document.getElementById('feedback__next');
+
+        if (!slides.length || !carousel || !prevBtn || !nextBtn) {
+            console.warn('Не хватает элементов для инициализации карусели');
+            return;
+        }
+
+        let currentIndex = 0;
+        const slideCount = slides.length;
+        let autoSlideInterval; // ← Сохраняем ID интервала
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        // Функция для сброса и перезапуска автопрокрутки
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval); // ← Очищаем старый интервал
+            autoSlideInterval = setInterval(() => {
+                nextBtn.click();
+            }, 8000); // ← Запускаем заново
+        }
+
+        // Показываем первый слайд
+        updateCarousel();
+        resetAutoSlide(); // ← Запускаем автопрокрутку впервые
+
+        // Обработчик для кнопки "Назад"
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+            updateCarousel();
+            resetAutoSlide(); // ← Сброс + перезапуск таймера
+        });
+
+        // Обработчик для кнопки "Вперёд"
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slideCount;
+            updateCarousel();
+            resetAutoSlide(); // ← Сброс + перезапуск таймера
+        });
+
+        // === СВАЙП НА МОБИЛЬНЫХ ===
+        let startX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        carousel.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    nextBtn.click(); // свайп влево
+                } else {
+                    prevBtn.click(); // свайп вправо
+                }
+                resetAutoSlide(); // ← Важно! Сброс при свайпе
+            }
+        });
+
+        // === ОПЦИОНАЛЬНО: пауза при наведении (десктоп) ===
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            resetAutoSlide();
+        });
+    });
+</script>
+
+
+<!-- FEATURES SECTION -->
+<section class="features">
+    <div class="features__container">
+        <h2 class="features__title">Почему покупка автомобиля в Южной Корее — это выгодно?</h2>
+        <div class="features__grid">
+            <div class="features__card">
+                <h3 class="features__card-title">Широкий выбор автомобилей</h3>
+                <img src="images/advantages/1.jpg" alt="Большой выбор автомобилей" class="features__card-image">
+                <p class="features__card-text">На площадках и аукционах Кореи можно подобрать автомобиль как от локальных производителей (Hyundai – Kia), так и авто европейских и американских марок.</p>
+            </div>
+            <div class="features__card">
+                <h3 class="features__card-title">Строгое законодательство</h3>
+                <img src="images/advantages/2.jpg" alt="Юридическая надежность" class="features__card-image">
+                <p class="features__card-text">В Южной Корее сокрытие фактов участия автомобиля в ДТП и корректировка пробега являются уголовно-наказуемыми деяниями, что делает покупку авто на порядок более прозрачной процедурой чем в России.</p>
+            </div>
+            <div class="features__card">
+                <h3 class="features__card-title">Дешевле чем в РФ и Европе</h3>
+                <img src="images/advantages/3.jpg" alt="Доступная цена" class="features__card-image">
+                <p class="features__card-text">Автомобиль с доставкой из Кореи обойдется дешевле в сравнении как с покупкой его в России так и привозом из Европы. Экономия может достигать до 30% рыночной стоимости.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .features {
+        padding: 80px 20px 0;
+        background-color: #f8f8f8;
+        color: #1b1b1b;
+    }
+
+    .features__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .features__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: var(--header-background-color, #1b1b1b);
+    }
+
+    .features__grid {
+        display: flex;
+        justify-content: space-between;
+        gap: 3%;
+        flex-wrap: wrap;
+    }
+
+    .features__card {
+        flex: 1 1;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .features__card:hover {
+       
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .features__card-title {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 30px 20px 20px 20px;
+        color: #1b1b1b;
+    }
+
+    @media (max-width: 1161px) {
+        .features__card-title {
+            min-height: 4rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .features__card-title {
+            min-height: auto;
+        }
+    }
+
+    .features__card-image {
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .features__card-text {
+        font-size: 1rem;
+        color: #555;
+        margin: 20px 20px 20px 20px;
+    }
+
+    @media (max-width: 767px) {
+        .features {
+            padding: 60px 15px; 0;
+        }
+        .features__title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        .features__grid {
+            gap: 15px;
+        }
+        .features__card {
+            flex: 1 1 100%;
+        }
+        .features__card-title {
+            font-size: 1.2rem;
+            margin: 20px 15px 20px 15px;
+        }
+        .features__card-text {
+            font-size: 0.95rem;
+            margin: 15px 15px 15px 15px;
+        }
+    }
+</style>
+
+<!-- CONTACT SECTION -->
+<section class="contact">
+    <div class="contact__container">
+        <div class="contact__wrapper">
+            <div class="contact__content">
+                <h2 class="contact__title">Остались вопросы?</h2>
+                <p class="contact__subtitle">Звоните:</p>
+                <p class="contact__phone-centered">
+                    <i class="fas fa-phone"></i> <a href="tel:+78125658008">+7 812 565-80-08</a>
+                </p>
+                <p class="contact__subtitle">или заполните форму — мы свяжемся с вами в течение 5 минут.</p>
+                <form id="contactForm" class="contact__form">
+                    <div class="contact__form-group">
+                        <label for="desiredCar" class="contact__label">Желаемый автомобиль</label>
+                        <input type="text" id="desiredCar" name="car" class="contact__input" placeholder="Например: Kia Sorento 2.0 AT 2023" required>
+                    </div>
+                    <div class="contact__form-group">
+                        <label for="userPhone" class="contact__label">Ваш телефон</label>
+                        <input type="tel" id="userPhone" name="phone" class="contact__input" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <button type="submit" class="contact__submit">Получить расчет</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .contact {
+        background-color: #474747;
+        color: #fff;
+        padding: 80px 20px;
+        margin-top: 80px;
+    }
+
+    .contact__container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .contact__wrapper {
+        display: flex;
+        justify-content: center; /* ← центрируем содержимое */
+        align-items: center;
+        gap: 5%;
+    }
+
+    .contact__content {
+        flex: 0 1 100%; /* ← на десктопе — ограничим ширину */
+        max-width: 500px; /* ← как в модальном окне */
+    }
+
+    .contact__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .contact__subtitle {
+        font-size: 1.1rem;
+        color: #fff;
+        margin: 1.5rem 0 1rem 0;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    /* 🔥 Стиль телефона — по центру */
+    .contact__phone-centered {
+        text-align: center;
+        font-size: 1.6rem;
+        margin: 0.5rem 0 1.5rem 0;
+    }
+
+    .contact__phone-centered i {
+        color: #FC4B2A;
+        margin-right: 8px;
+    }
+
+    .contact__phone-centered a {
+        color: #FC4B2A;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .contact__phone-centered a:hover {
+        text-decoration: underline;
+    }
+
+    /* 🔥 Стиль формы — как в модальном окне */
+    .contact__form {
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        margin-top: 1.5rem;
+    }
+
+    .contact__form-group {
+        margin-bottom: 20px;
+    }
+
+    .contact__label {
+        display: block;
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+
+    .contact__input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+        box-sizing: border-box;
+    }
+
+    .contact__input:focus {
+        outline: none;
+        border-color: #FC4B2A;
+    }
+
+    .contact__input::placeholder {
+        color: #aaa;
+    }
+
+    /* 🔥 Кнопка — как в модалке */
+    .contact__submit {
+        width: 100%;
+        padding: 14px;
+        background-color: #FC4B2A;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+    }
+
+    .contact__submit:hover {
+        background-color: #e04225;
+    }
+
+    @media (max-width: 767px) {
+        .contact {
+            margin-top: 60px;
+            padding: 40px 15px;
+        }
+
+        .contact__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact__content {
+            width: 100%;
+        }
+
+        .contact__title {
+            font-size: 1.4rem;
+        }
+
+        .contact__subtitle {
+            font-size: 1rem;
+        }
+
+        .contact__form {
+            padding: 20px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contactForm');
+        const phoneInput = document.getElementById('userPhone');
+
+        // Маска телефона
+        phoneInput.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                value = '+7 (' + value;
+            }
+            if (value.length > 5) {
+                value = value.slice(0, 5) + ') ' + value.slice(5);
+            }
+            if (value.length > 10) {
+                value = value.slice(0, 10) + '-' + value.slice(10);
+            }
+            if (value.length > 13) {
+                value = value.slice(0, 13) + '-' + value.slice(13, 15);
+            }
+            e.target.value = value.slice(0, 18);
+        });
+
+        // Обработка отправки формы
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const car = document.getElementById('desiredCar').value.trim();
+            const phone = document.getElementById('userPhone').value.trim();
+
+            if (!car || !phone) {
+                alert('Пожалуйста, заполните все поля.');
+                return;
+            }
+
+            console.log('Отправка данных:', { car, phone });
+            alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+            form.reset();
+        });
+    });
+</script>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <a href="/" class="footer__logo-link">
+                    <img src="images/logo.png" alt="Логотип Автогольдер" class="footer__logo">
+                </a>
+                <p class="footer__description">
+                    Ваш надежный партнер в выборе автомобиля с доставкой из Кореи.
+                </p>
+            </div>
+            <div class="footer__links">
+                <h3 class="footer__links-title">Навигация</h3>
+                <ul class="footer__links-list">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#catalog">Каталог авто</a></li>
+                    <li><a href="#credit">Кредит</a></li>
+                    <li><a href="#team">Наша команда</a></li>
+                </ul>
+            </div>
+            <div class="footer__contacts">
+                <h3 class="footer__contacts-title">Контакты</h3>
+                <div class="footer__phone">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+78125658008">+7 812 565-80-08</a>
+                </div>
+                <div class="footer__schedule">
+                    <i class="far fa-calendar-alt"></i>
+                    Пн - Сб: 10:00 – 21:00 | Вс: 11:00 – 20:00
+                </div>
+                <address class="footer__address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Санкт-Петербург, ул. Оптиков, 4, корп. 2
+                </address>
+                <div class="footer__social-icons">
+                    <a href="https://t.me/autogolder_sale" target="_blank" class="footer__social-icon" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://wa.me/message/C7G2XD6QBLIFK1" target="_blank" class="footer__social-icon" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://2gis.ru/spb/firm/70000001069603108" target="_blank" class="footer__social-icon" aria-label="2ГИС">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </a>
+                    <a href="https://yandex.ru/maps/org/avtogolder/176711063098" target="_blank" class="footer__social-icon" aria-label="Яндекс Карты">
+                        <i class="fab fa-yandex"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">
+                &copy; 2025 ООО «Автогольдер». Все права защищены.
+            </p>
+            <div class="footer__legal">
+                <a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </div>                                     
+    <!--Разработка сайта - Степанов Виктор Игоревич-->                                        
+
+</footer>
+
+<style>
+    .footer {
+        background-color: #1b1b1b;
+        color: #fff;
+        padding: 60px 0 30px;
+    }
+
+    .footer__container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 15px 15px;
+    }
+
+    .footer__top {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .footer__brand,
+    .footer__links,
+    .footer__contacts,
+    .footer__social {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__logo-link {
+        display: inline-block;
+        margin-top:5px;
+        margin-bottom: 10px;
+    }
+
+    .footer__logo {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .footer__description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #ccc;
+    }
+
+    .footer__links-title,
+    .footer__contacts-title,
+    .footer__social-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #FC4B2A;
+    }
+
+    .footer__links-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer__links-list li {
+        margin-bottom: 10px;
+    }
+
+    .footer__links-list a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-size: 0.95rem;
+    }
+
+    .footer__links-list a:hover {
+        color: #FC4B2A;
+    }
+
+    .footer__address,
+    .footer__phone,
+    .footer__schedule {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 12px;
+        font-size: 0.90rem;
+        color: #ccc;
+    }
+
+    .footer__address i,
+    .footer__phone i,
+    .footer__schedule i {
+        color: #FC4B2A;
+        min-width: 16px;
+        margin-top: 3px;
+    }
+
+    .footer__phone a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .footer__phone a:hover {
+        color: #FC4B2A;
+    }
+
+    .footer__social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .footer__social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 18px;
+    }
+
+    .footer__social-icon:hover {
+        background-color: #FC4B2A;
+        transform: translateY(-3px);
+    }
+
+    .footer__bottom {
+        border-top: 1px solid #333;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer__copyright {
+        font-size: 0.9rem;
+        color: #aaa;
+        text-align: center;
+    }
+
+    .footer__legal {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer__legal a {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 0.85rem;
+        transition: color 0.2s;
+    }
+
+    .footer__legal a:hover {
+        color: #FC4B2A;
+    }
+
+    @media (max-width: 767px) {
+        .footer {
+            padding: 40px 0 20px;
+        }
+
+        .footer__top {
+            gap: 30px;
+        }
+
+        .footer__logo {
+            max-width: 160px;
+        }
+
+        .footer__description {
+            font-size: 0.9rem;
+        }
+
+        .footer__links-title,
+        .footer__contacts-title,
+        .footer__social-title {
+            font-size: 1rem;
+        }
+
+        .footer__address,
+        .footer__phone,
+        .footer__schedule {
+            font-size: 0.9rem;
+        }
+
+        .footer__social-icons {
+            gap: 10px;
+        }
+
+        .footer__social-icon {
+            width: 36px;
+            height: 36px;
+            font-size: 16px;
+        }
+
+        .footer__bottom {
+            gap: 10px;
+        }
+
+        .footer__legal {
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+</style>
+
+<!-- MODAL FORM -->
+<div id="requestModal" class="modal">
+    <div class="modal__overlay" data-close="true"></div>
+    <div class="modal__content">
+        <button class="modal__close" data-close="true" aria-label="Закрыть форму">
+            <i class="fas fa-times"></i>
+        </button>
+        <h3 class="modal__title">Получить расчет стоимости автомобиля</h3>
+        <form id="requestForm" class="modal__form">
+            <div class="modal__form-group">
+                <label for="carModel" class="modal__label">Желаемый автомобиль</label>
+                <input type="text" id="carModel" name="carModel" class="modal__input" placeholder="Например: Kia Sorento 2.0 AT 2023" required>
+            </div>
+            <div class="modal__form-group">
+                <label for="phone" class="modal__label">Ваш телефон</label>
+                <input type="tel" id="phone" name="phone" class="modal__input" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <button type="submit" class="modal__submit">Получить расчет</button>
+        </form>
+        <p class="modal__note">Нажимая кнопку, вы соглашаетесь с <a href="privacy.html">политикой конфиденциальности</a>.</p>
+    </div>
+</div>
+
+<style>
+/* MODAL STYLES */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modal__content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.modal.active .modal__content {
+    transform: translateY(0);
+}
+
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.modal__close:hover {
+    color: #FC4B2A;
+    background: #f5f5f5;
+}
+
+.modal__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1b1b1b;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.modal__form-group {
+    margin-bottom: 20px;
+}
+
+.modal__label {
+    display: block;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.modal__input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.modal__input:focus {
+    outline: none;
+    border-color: #FC4B2A;
+}
+
+.modal__input::placeholder {
+    color: #aaa;
+}
+
+.modal__submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #FC4B2A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.modal__submit:hover {
+    background-color: #e04225;
+}
+
+.modal__note {
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.modal__note a {
+    color: #FC4B2A;
+    text-decoration: none;
+}
+
+.modal__note a:hover {
+    text-decoration: underline;
+}
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById('requestModal');
+        const openButtons = document.querySelectorAll('.request-btn');
+        const closeButtons = document.querySelectorAll('[data-close]');
+        const form = document.getElementById('requestForm');
+
+        // Открытие модального окна
+        openButtons.forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // запрещаем скролл
+            });
+        });
+
+        // Закрытие модального окна
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // разрешаем скролл
+            });
+        });
+
+        // Закрытие по клику на overlay
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Закрытие по Esc
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Обработка отправки формы
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const carModel = document.getElementById('carModel').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+
+            if (!carModel || !phone) {
+                alert('Пожалуйста, заполните все поля.');
+                return;
+            }
+
+            // Здесь можно отправить данные на сервер, в Telegram и т.д.
+            console.log('Отправка данных:', { carModel, phone });
+
+            // Показываем сообщение об успехе
+            alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
+
+            // Закрываем модалку и сбрасываем форму
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+            form.reset();
+        });
+
+        // Опционально: маска ввода телефона
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                value = '+7 (' + value;
+            }
+            if (value.length > 5) {
+                value = value.slice(0, 5) + ') ' + value.slice(5);
+            }
+            if (value.length > 10) {
+                value = value.slice(0, 10) + '-' + value.slice(10);
+            }
+            if (value.length > 13) {
+                value = value.slice(0, 13) + '-' + value.slice(13, 15);
+            }
+            e.target.value = value.slice(0, 18);
+        });
+    });
+</script>
+
+<script>
+    //Плавная прокрутка по внутреннему меню
+    document.addEventListener('DOMContentLoaded', function () {
+        // Выбираем все ссылки в навигационных меню (и десктоп, и мобильное)
+        const navLinks = document.querySelectorAll('.header__desktop-menu a, .header__mobile-menu a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Отменяем стандартное поведение
+
+                const targetId = this.getAttribute('href'); // Получаем значение href, например "#credit"
+                if (targetId && targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Плавная прокрутка до элемента
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+
+                        // Обновляем URL в адресной строке без перезагрузки страницы
+                        history.pushState(null, '', targetId);
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

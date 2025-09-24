@@ -1,0 +1,41 @@
+[
+  {
+    "name": "main page",
+    "url": "/",
+    "meta": {
+      "title": "Exportcars - Каталог автомобилей из Кореи",
+      "description": "Доставка автомобилей из Кореи под ключ",
+      "keywords": "Encar, Encar Catalogue, Доставка из Кореи, машины из кореи, авто из Кореи",
+      "image_url": "https://autogolder.ru/meta/meta_main.jpg",
+      "image_type": "",
+      "image_width": "",
+      "image_height": ""
+    }
+  },
+  {
+    "name": "catalog page",
+    "url": "/catalog",
+    "meta": {
+      "title": "",
+      "description": "Доставка автомобилей из Кореи под ключ",
+      "keywords": "Encar, Encar Catalogue, Доставка из Кореи, машины из кореи, авто из Кореи",
+      "image_url": "https://autogolder.ru/meta/meta_main.jpg",
+      "image_type": "",
+      "image_width": "",
+      "image_height": ""
+    }
+  },
+  {
+    "name": "car page",
+    "url": "/car",
+    "meta": {
+      "title": "",
+      "description": "Доставка автомобилей из Кореи под ключ",
+      "keywords": "Encar, Encar Catalogue, Доставка из Кореи, машины из кореи, авто из Кореи",
+      "image_url": "https://autogolder.ru/meta/meta_default.jpg",
+      "image_type": "",
+      "image_width": "",
+      "image_height": ""
+    }
+  }
+]

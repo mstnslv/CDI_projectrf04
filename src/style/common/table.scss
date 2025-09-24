@@ -1,0 +1,591 @@
+@import "/src/style/style_vars.scss";
+
+
+
+
+table th, table td {
+  border-left: none !important;
+}
+
+table{
+  display: table;
+  width: 100%;
+  @include avto-font2;
+  border-collapse: collapse;
+
+  tr{
+    border-bottom: 1px solid $avto_clr-lightgrayblue;
+
+  }
+  tr:last-child{
+    border-bottom: none;
+  }
+
+  td{
+    border: none; /* Убираем все остальные границы */
+    padding: 5px; /* Добавляем отступы для содержимого ячеек (по желанию) */
+    height: 44px;
+  }
+
+  tr{
+
+  }
+
+  tr td{
+    text-align: left;
+    color: $avto_clrtext-dark;
+    font-weight: 500;
+
+  }
+  tr th{
+    text-align: left;
+    color: $avto_clrtext-dark;
+    font-weight: 600;
+    min-width: 8ch;
+
+  }
+
+  .tablecol--placeholdergood{
+    padding-top: 0;
+    padding-bottom: $avto_gap * 3;
+    padding-left: 0;
+    padding-right: 0;
+
+    width: 100%;
+
+    & span{
+      display: block;
+      font-weight: 700;
+      padding: $avto_gap-half $avto_gap;
+      width: 100%;
+      color: $clrTextGreen;
+      background-color: $avto_clr-lightgray;
+      @include borderRadius;
+    }
+  }
+
+  .tablecol-odometr{
+    text-align: center;
+    color: $avto_clrtext-dark;
+    font-weight: 700;
+  }
+  .tablecol-info{
+    text-align: center;
+    color: $avto_clrtext-dark;
+    font-weight: 700 !important;
+  }
+
+  .tablecol-status{
+    width: 100%;
+
+    & span{
+      min-width: 100px;
+      display: inline-block;
+      background-color: transparent;
+      color: $avto_clrtext-graylight;
+      font-weight: 400;
+      box-sizing: border-box;
+      padding: $avto_gap-mini * 0.5 $avto_gap-half;
+      border-color: transparent;
+      border-style: solid;
+      border-width: 1px;
+      @include borderRadius-mini;
+
+    }
+  }
+  .tablecol-status--good{
+    //background-color: $clrGreen;
+    //color: $clrTextGreen;
+  }
+  .tablecol-status--good.active{
+    font-weight: 600;
+    & span{
+      background-color: $clrGreen;
+      color: $clrTextGreen;
+      border-color: $clrTextGreen;
+    }
+
+  }
+  .tablecol-status--notgood{
+    //background-color: $clrYellow;
+    //color: $clrTextYellow;
+  }
+  .tablecol-status--notgood.active{
+    font-weight: 600;
+    & span{
+      background-color: $clrYellow;
+      color: $clrTextYellow;
+      border-color: $clrYellow;
+    }
+  }
+  .tablecol-status--bad{
+  }
+  .tablecol-status--bad.active{
+    font-weight: 600;
+    & span{
+      background-color: $clrRed;
+      color: $clrTextRed;
+      border-color: $clrRed;
+    }
+  }
+  .tablecol-status--yes.active{
+    font-weight: 600;
+    & span{
+      color: $clrTextBlue;
+      background-color: $clrBlue;
+      border-color: $clrTextBlue;
+    }
+  }
+  .tablecol-status--no.active{
+    font-weight: 600;
+    & span{
+      color: $clrTextBlue;
+      background-color: $clrBlue;
+      border-color: $clrTextBlue;
+    }
+  }
+}
+
+.table--summary{
+  .tablecol-status{
+    max-width: 380px;
+    width: 50%;
+    color: $clrGray;
+    text-align: center;
+  }
+
+  //Механизм показа только 1 колонки статуса проблемы
+  .tablecol-status--notgood{
+    display: none;
+  }.tablecol-status--notgood.active{
+     display: table-cell;
+   }
+  .tablecol-status--good{
+    display: none;
+  }
+  .tablecol-status--good.active{
+    display: table-cell;
+  }
+  .tablecol-status--no{
+    display: none;
+  }
+  .tablecol-status--no.active{
+    display: table-cell;
+  }
+  .tablecol-status--bad{
+    display: none;
+  }
+  .tablecol-status--bad.active{
+    display: table-cell;
+  }
+}
+.table--repairstory{
+  //margin-bottom: $size * 3;
+
+  thead tr th{
+    font-weight: 600;
+  }
+  tbody tr th{
+    font-weight: 500;
+    text-align: left;
+    width: 20%;
+  }
+  tbody  tr td{
+    font-weight: 500;
+    text-align: center;
+    max-width: 100%;
+    width: auto;
+
+  }
+
+
+}
+.table--repairstorysummary{
+
+  tbody tr th{
+    font-weight: 500;
+    text-align: left;
+    width: 30%;
+  }
+  tbody tr td{
+    width: 23.3%;
+  }
+
+  //Механизм показа только 1 колонки статуса проблемы
+  .tablecol-status--notgood{
+    display: none;
+  }.tablecol-status--notgood.active{
+    display: table-cell;
+  }
+  .tablecol-status--good{
+    display: none;
+  }
+  .tablecol-status--good.active{
+    display: table-cell;
+  }
+  .tablecol-status--no{
+    display: none;
+  }
+  .tablecol-status--no.active{
+    display: table-cell;
+  }
+
+
+}
+.table--repairstoryall{
+
+  tbody tr th{
+    font-weight: 500;
+    text-align: left;
+    width: 30%;
+  }
+  tbody tr td{
+    width: 23.3%;
+  }
+
+}
+.table--repairstoryowners{
+
+}
+.table--repairstorypayments{
+
+}
+
+.table--techreport{
+
+  thead{
+    display: none;
+  }
+
+  .tablecol-status{
+    max-width: 180px;
+    width: 10%;
+  }
+
+  tr td{
+    text-align: left;
+  }
+
+  tr td.tablecol-status{
+    text-align: center;
+  }
+
+  tr th {
+    color: $avto_clrtext-gray;
+    padding-right: 2ch;
+  }
+
+  //Механизм показа только 1 колонки статуса проблемы
+  .tablecol-status--notgood{
+    display: none;
+  }.tablecol-status--notgood.active{
+     display: table-cell;
+   }
+  .tablecol-status--good{
+    display: none;
+  }
+  .tablecol-status--good.active{
+    display: table-cell;
+  }
+  .tablecol-status--no{
+    display: none;
+  }
+  .tablecol-status--no.active{
+    display: table-cell;
+  }
+  .tablecol-status--bad{
+    display: none;
+  }
+  .tablecol-status--bad.active{
+    display: table-cell;
+  }
+
+}
+
+@media screen and (max-width: 999px) {
+
+  table{
+
+    tr{
+      border-bottom: 1px solid $avto_clr-lightgrayblue;
+
+    }
+    tr:last-child{
+      //border-bottom: none;
+    }
+
+    td{
+      border: none; /* Убираем все остальные границы */
+      padding: 5px; /* Добавляем отступы для содержимого ячеек (по желанию) */
+      height: 44px;
+    }
+
+    tr{
+
+    }
+
+    tr td{
+      text-align: left;
+      color: $avto_clrtext-dark;
+      font-weight: 500;
+
+    }
+    tr th{
+      text-align: left;
+      color: $avto_clrtext-dark;
+      font-weight: 600;
+      min-width: 8ch;
+
+    }
+
+    .tablecol--placeholdergood{
+      padding-top: 0;//$avto_gap * 1;
+      padding-bottom: $avto_gap * 3;
+      padding-left: 0;
+      padding-right: 0;
+
+      width: 100%;
+
+      & span{
+        display: block;
+        font-weight: 700;
+        padding: $avto_gap-half $avto_gap;
+        width: 100%;
+        color: $clrTextGreen;
+        //border: 1px solid $clrTextGreen;
+        background-color: $avto_clr-lightgray;
+        @include borderRadius;
+
+      }
+
+    }
+
+    .tablecol-odometr{
+      text-align: center;
+      color: $avto_clrtext-dark;
+      font-weight: 700;
+    }
+    .tablecol-info{
+      text-align: center;
+      color: $avto_clrtext-dark;
+      font-weight: 700 !important;
+    }
+
+    .tablecol-status{
+
+      //@include flexCenter;
+      width: 100%;
+
+      & span{
+        min-width: 72px;
+        padding: $avto_gap-mini--mobile $avto_gap-half--mobile;
+      }
+    }
+    .tablecol-status--good{
+      //background-color: $clrGreen;
+      //color: $clrTextGreen;
+    }
+    .tablecol-status--good.active{
+      font-weight: 600;
+      & span{
+        background-color: $clrGreen;
+        color: $clrTextGreen;
+        border-color: $clrTextGreen;
+      }
+
+    }
+    .tablecol-status--notgood{
+      //background-color: $clrYellow;
+      //color: $clrTextYellow;
+    }
+    .tablecol-status--notgood.active{
+      font-weight: 600;
+      & span{
+        background-color: $clrYellow;
+        color: $clrTextYellow;
+        border-color: $clrYellow;
+      }
+    }
+    .tablecol-status--bad{
+    }
+    .tablecol-status--bad.active{
+      font-weight: 600;
+      & span{
+        background-color: $clrRed;
+        color: $clrTextRed;
+        border-color: $clrRed;
+      }
+    }
+    .tablecol-status--yes.active{
+      font-weight: 600;
+      & span{
+        color: $clrTextBlue;
+        background-color: $clrBlue;
+        border-color: $clrTextBlue;
+      }
+    }
+    .tablecol-status--no.active{
+      font-weight: 600;
+      & span{
+        color: $clrTextBlue;
+        background-color: $clrBlue;
+        border-color: $clrTextBlue;
+      }
+    }
+  }
+
+  .table--summary{
+    .tablecol-status{
+      max-width: 380px;
+      width: 50%;
+      color: $clrGray;
+      text-align: center;
+    }
+
+    //Механизм показа только 1 колонки статуса проблемы
+    .tablecol-status--notgood{
+      display: none;
+    }.tablecol-status--notgood.active{
+       display: table-cell;
+     }
+    .tablecol-status--good{
+      display: none;
+    }
+    .tablecol-status--good.active{
+      display: table-cell;
+    }
+    .tablecol-status--no{
+      display: none;
+    }
+    .tablecol-status--no.active{
+      display: table-cell;
+    }
+  }
+  .table--repairstory{
+
+    thead tr th{
+      font-weight: 600;
+    }
+    tbody tr th{
+      font-weight: 500;
+      text-align: left;
+      width: 20%;
+    }
+    tbody  tr td{
+      font-weight: 500;
+      text-align: center;
+      max-width: 100%;
+      width: auto;
+
+    }
+
+
+  }
+  .table--repairstorysummary{
+
+    tbody tr th{
+      font-weight: 500;
+      text-align: left;
+      width: 30%;
+    }
+    tbody tr td{
+      width: 23.3%;
+    }
+
+    //Механизм показа только 1 колонки статуса проблемы
+    .tablecol-status--notgood{
+      display: none;
+    }.tablecol-status--notgood.active{
+       display: table-cell;
+     }
+    .tablecol-status--good{
+      display: none;
+    }
+    .tablecol-status--good.active{
+      display: table-cell;
+    }
+    .tablecol-status--no{
+      display: none;
+    }
+    .tablecol-status--no.active{
+      display: table-cell;
+    }
+
+
+  }
+  .table--repairstoryall{
+
+    tbody tr th{
+      font-weight: 500;
+      text-align: left;
+      width: 30%;
+    }
+    tbody tr td{
+      width: 23.3%;
+    }
+
+  }
+  .table--repairstoryowners{
+
+  }
+  .table--repairstorypayments{
+
+  }
+
+
+
+  .table--techreport{
+
+
+    thead{
+      display: none;
+    }
+
+    .tablecol-status{
+      max-width: 180px;
+      width: 10%;
+    }
+
+    tr td{
+      text-align: left;
+    }
+
+    tr td.tablecol-status{
+      text-align: center;
+    }
+
+    tr th {
+      color: $avto_clrtext-gray;
+      padding-right: 2ch;
+      display: none;
+    }
+
+    //Механизм показа только 1 колонки статуса проблемы
+    .tablecol-status--notgood{
+      display: none;
+    }.tablecol-status--notgood.active{
+       display: table-cell;
+     }
+    .tablecol-status--good{
+      display: none;
+    }
+    .tablecol-status--good.active{
+      display: table-cell;
+    }
+    .tablecol-status--no{
+      display: none;
+    }
+    .tablecol-status--no.active{
+      display: table-cell;
+    }
+    .tablecol-status--bad{
+      display: none;
+    }
+    .tablecol-status--bad.active{
+      display: table-cell;
+    }
+
+  }
+
+}
+

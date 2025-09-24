@@ -1,0 +1,287 @@
+
+
+
+
+.catalogview{
+  width: 100%;
+  padding-top: $avto_gap*2;
+  min-height: 100vh;
+
+
+  & section.catalogviewwrap{
+    @include avto-pageSize-center;
+
+  }
+
+  & .contentwrap{
+    @include pageSize1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: $avto_gap * 2;
+
+    & .filter_mobile-btnswrap{
+      display: none;
+    }
+    & .catalog_mob-btnswrap{
+      display: none;//flex;
+      position: fixed;
+      z-index: 1001;
+      //bottom: $size * 1.5;
+      //right: $size * 1.5;
+
+      & button.catalog_mob-btnfilter{
+        @include mixin-button2;
+        border-radius: 0;
+        min-width: 160px;
+        background-color: $clrGrayDark2;
+
+        &:hover{
+          background-color: $clrGrayDark;
+        }
+
+      }
+
+    }
+
+    .catalogview_top{
+      width: 100%;
+    }
+
+    .catalogview_bottom {
+      width: 100%;
+
+      & .carslist{
+        gap: $size * 1.5;
+        max-width: none;
+      }
+
+      & .carblock{
+        padding: 0;
+      }
+
+      .carblock_img{
+        height: 220px;
+      }
+    }
+
+    .catalogview_sortblock{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+
+
+      margin-bottom: $avto_gap;
+      margin-right: 2px;
+
+      & .catalogview_sortblock-totalfound{
+        margin-left: 1px;
+        width: auto;
+
+        & span{
+          @include avto-font1;
+          font-weight: 600;
+        }
+      }
+
+      & .catalogview_sortblock-sortwrap{
+        width: auto;
+        position: relative;
+        z-index: 1;
+
+        & .dropactiveline{
+          padding: 0;
+          padding-top: $avto_gap-mini;
+          padding-bottom: $avto_gap-mini;
+          justify-content: flex-end;
+          gap: 1ch;
+        }
+      }
+
+      & .linearsort{
+        display: flex;
+        gap: $avto_gap;
+      }
+      & .linearsort_item{
+        @include mix-font-reg--light;
+        font-weight: 400;
+        color: $avto_clrtext-gray;
+        cursor: pointer;
+      }
+      & .linearsort_item--active{
+        @include mix-font-reg;
+        font-weight: 700;
+        color: $avto_clrtext-graydark;
+      }
+
+    }
+  }
+
+}
+
+.catalogview.catalogview--topcontent{
+  padding-top: $avto_gap*4;
+  min-height: auto;
+  .contentwrap{
+    display: none
+  }
+}
+
+@media screen and (max-width: 999px) {
+
+  .catalogview{
+    padding-top: $avto_gap--mobile * 1;
+
+    & .contentwrap{
+      @include pageSize1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: auto;
+      gap: $avto_gap--mobile * 2;
+
+      & .filter_mobile-btnswrap{
+        display: none;
+      }
+      & .catalog_mob-btnswrap{
+        display: none;//flex;
+        position: fixed;
+        z-index: 1001;
+        //bottom: $size * 1.5;
+        //right: $size * 1.5;
+
+        & button.catalog_mob-btnfilter{
+          @include mixin-button2;
+          border-radius: 0;
+          min-width: 160px;
+          background-color: $clrGrayDark2;
+
+          &:hover{
+            background-color: $clrGrayDark;
+          }
+
+        }
+
+      }
+
+      .catalogview_top{
+        width: 100%;
+      }
+
+      .catalogview_bottom {
+        width: 100%;
+
+        & .carslist{
+          gap: $size * 1.5;
+          max-width: none;
+        }
+
+        & .carblock{
+          padding: 0;
+        }
+
+        .carblock_img{
+          height: 220px;
+          height: auto;
+        }
+      }
+
+      .catalogview_sortblock{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: space-around;
+        gap: $avto_gap--mobile;
+
+        align-items: flex-start;//center;
+        user-select: none;
+
+
+        margin-bottom: $avto_gap--mobile;
+        margin-right: 0px;
+
+        & .catalogview_sortblock-totalfound{
+          margin-left: 0px;
+          width: auto;
+
+
+          & span{
+            @include fontH3;
+            color: $avto_clrtext-gray;
+          }
+        }
+
+        & .catalogview_sortblock-sortwrap{
+          width: auto;
+          position: relative;
+          z-index: 1;
+
+
+          & .dropactiveline{
+            padding: 0;
+            padding-top: $avto_gap-mini;
+            padding-bottom: $avto_gap-mini;
+            justify-content: flex-end;
+            gap: 1ch;
+
+          }
+        }
+
+        & .linearsort{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding: $avto_gap--mobile;
+          @include borderRadius;
+          gap: normal;
+          background-color: $avto-clr-lightgray;
+          //position: sticky;
+          //top: 100px;
+          //z-index: 1000;
+        }
+        & .linearsort_item{
+          @include font2;
+          font-weight: 400;
+          color: $avto_clrtext-gray;
+          cursor: pointer;
+          max-width: 12ch;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+        }
+        & .linearsort_item--active{
+          font-weight: 700;
+          color: $avto_clrtext-graydark;
+        }
+
+      }
+    }
+
+  }
+
+  .catalogview.catalogview--topcontent{
+
+    @include avto-pageSize-center;
+    margin-top: $avto_gap--mobile * 5;
+
+
+    .contentwrap{
+      display: flex;
+      padding: $size*0.5;
+      background-color: $avto-clr-lightgray;
+      @include borderRadius;
+
+      & h1{
+        @include avto-fontH1;
+        font-size: 5vw !important;
+        padding-top: $size*0.5;
+        padding-bottom: $size*0.5;
+        color: $avto_clrtext-graydark;
+        text-align: center;
+      }
+    }
+  }
+
+
+}

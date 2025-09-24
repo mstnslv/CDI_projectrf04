@@ -1,0 +1,40 @@
+@import "/src/style/style_vars.scss";
+
+.none{
+  display: none;
+}
+
+.catalogcarinspect{
+  width: 100%;
+
+  & h3{
+    @include avto-fontH3;
+    margin-top: $avto_gap * 2;
+    color: $clrTextBlack;
+  }
+
+  & .catalogcarinspect_list{
+    @include flexVertical;
+    width: 100%;
+
+    & .dropzone{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .carInspect{
+    .droplist{
+      overflow: auto;
+    }
+  }
+
+  .catalogcarinspect{
+    & h3{
+      margin-top: $avto_gap--mobile * 2;
+    }
+  }
+
+
+}

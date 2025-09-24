@@ -1,0 +1,643 @@
+@import "/src/style/style_vars.scss";
+
+$dropzone_line: 40px;
+$dropzone_line_1600: 36px;
+$dropzone_line_HD: 32px;
+$dropzone_line_TAB: 40px;
+$dropzone_line_MOB: 40px;
+
+
+input{
+  width: 100%;
+  height: 100%;
+  padding-left: $avto_gap;
+  padding-right: $avto_gap-half;
+  background-color: transparent;
+  -webkit-appearance: none;
+
+  &::-webkit-search-cancel-button{
+    display: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+}
+input::placeholder{
+  color: $avto-clrtext-dark;
+  font-weight: 500;
+}
+input[type='search'], input[type='text'], input[type='number'],{
+  border: none !important;
+  background-color: transparent;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: $avto_gap-half;
+  @include avto-font1;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.ninput.nodata{
+  background-color: $avto-clr-lightgray;
+
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: auto;
+  }
+  .icn_drop{
+    display: none;
+  }
+}
+.ninput.disabled{
+
+  & .ninput_line{
+    background-color: $avto-clr-lightgray;
+    border: 1px solid $avto-clr-lightgray;
+
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: progress;
+      //border: 1px solid $clrGray !important;
+      outline: none !important;
+  }
+
+
+  }
+
+  .icn_drop{
+    cursor: progress;
+    stroke: $clrTextGray;
+  }
+  .icn_inpt{
+    stroke: $clrTextGray;
+  }
+
+  .ninput_drop{
+    display: none;
+  }
+
+}
+
+
+// Добавляет лоадер, если есть компонент
+.ninput.loading{
+  background-color: $avto-clr-lightgray;
+
+  .icn_drop{
+    display: none;
+  }
+
+  .loaderwrap{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    //width: 100%;
+    height: 100%;
+    right: 2px;
+    top: 0;
+
+  }
+
+  .lds-ring{
+    @include icon--mini;
+
+    & div{
+      border-width: 2px;
+      border-color: $avto-clrtext-gray transparent transparent;
+    }
+  }
+}
+
+.ninput.error{
+
+  //background-color: rgba(255, 99, 71, 0.3);
+  .ninput_line{
+    border: 1px solid $clrTextRed;
+    background-color: rgba(255, 99, 71, 0.05);
+
+
+  }
+
+  .ninput_label{
+    color: rgba(255, 99, 71, 1);
+  }
+}
+
+.ninput.good{
+
+  //background-color: rgba(255, 99, 71, 0.3);
+  .ninput_line{
+    border: 1px solid rgb(60, 179, 113);
+    background-color: rgba(60, 179, 113, 0.05);
+  }
+
+  .ninput_label{
+    color: rgb(60, 179, 113) !important;
+  }
+}
+
+.catalog-sort{
+  min-width: 180px;
+  border: 1px solid transparent;
+  border-radius: $borderRadius1;
+  border-bottom: 20px;
+  box-sizing: border-box;
+  border-bottom: none;
+  user-select: none;
+
+  & .ninput_drop{
+    max-height: none !important;
+    padding-top: 0  !important;
+    padding-bottom:  0 !important;
+    overflow: hidden  !important;
+  }
+
+  & .dropactiveline{
+
+    height: 100%;
+    @include flexBetween;
+    cursor: pointer;
+    padding: $size $size;
+
+
+    & svg{
+      @include icon;
+      stroke: $clrTextGray;
+      margin-right: 2px;
+    }
+
+    & .dropactiveline-name{
+      @include avto-font1;
+      color: $avto-clrtext-gray;
+    }
+
+    & .ninput_drop{
+      max-height: $dropzone_line * 6 + $size * 0.75;
+    }
+
+  }
+
+}
+
+.ninput{
+  position: relative;
+  width: 100%;
+  z-index: 0;
+
+  & .ninput_line{
+    height: $avto_input-height;
+    @include flexBetween;
+    @include borderRadius;
+    overflow: hidden;
+    background-color: $avto-clr-white;
+
+    & input{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & .ninput_drop{
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin-top: $avto_gap-mini;
+    @include borderRadius;
+    background-color: $avto-clr-white;
+    max-height: $dropzone_line * 7;
+    min-height: $dropzone_line * 1;
+    box-shadow: 0px 10px 30px 0px rgba(226, 236, 249, 0.50);
+
+    & .ninput_drop__line{
+      @include avto-font1;
+      @include flexBetween;
+      line-height: $dropzone_line;
+      min-height: $dropzone_line;
+      padding-left: $avto_gap-half;
+      padding-right: $avto_gap-mini;
+      overflow: hidden;
+
+      & span:first-child{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+
+      & label {
+        width: 100%;
+
+        & > span {
+          color: $avto-clrtext-dark;
+        }
+      }
+    }
+    & .ninput_drop__line.marked{
+
+    }
+    & .ninput_drop__line:hover{
+      background-color: $avto_clr-lightgray;
+
+      label{
+        span{
+          color:  $avto-clrtext-dark;
+        }
+        input[type=checkbox]:before {
+          background-color: $avto_clr-white;
+        }
+      }
+    }
+    & .ninput_drop__line.active{
+      background-color: $avto_clr-lightgray;
+    }
+
+
+    &--h1{
+      max-height: $dropzone_line * 1 + $avto_gap-sub;
+    }
+
+    &--h2{
+      max-height: $dropzone_line * 2 + $avto_gap-sub;
+    }
+    &--h3{
+      max-height: $dropzone_line * 3 + $avto_gap-sub;
+      //min-height: $dropzone_line * 3;
+    }
+    &--h4{
+      max-height: $dropzone_line * 4 + $avto_gap-sub;
+      //min-height: $dropzone_line * 4;
+    }
+    &--h5{
+      max-height: $dropzone_line * 5 + $avto_gap-sub;
+      //min-height: $dropzone_line * 5;
+    }
+    &--h6{
+      max-height: $dropzone_line * 6 + $avto_gap-sub;
+      //min-height: $dropzone_line * 6;
+    }
+    &--h7{
+      max-height: $dropzone_line * 7 + $avto_gap-sub;
+      //min-height: $dropzone_line * 7;
+    }
+    &--h8{
+      max-height: $dropzone_line * 8 + $avto_gap-sub;
+      //min-height: $dropzone_line * 8;
+    }
+    &--h9{
+      max-height: $dropzone_line * 9 + $avto_gap-sub;
+      //min-height: $dropzone_line * 9;
+    }
+    &--h10{
+      max-height: $dropzone_line * 10 + $avto_gap-sub;
+      //min-height: $dropzone_line * 10;
+    }
+  }
+
+  & .ninput_label{
+    @include avto-font1;
+  }
+
+  & .loaderwrap{
+    display: none;
+  }
+
+  & .icn_drop{
+    cursor: pointer;
+    position: absolute;
+    right: $avto_gap-mini;
+    stroke: $clrTextGray;
+  }
+  & .icn_clear{
+    cursor: pointer;
+    position: absolute;
+    right: $avto_gap-mini;
+    stroke: $clrTextGray;
+  }
+  & .icn_search{
+    cursor: pointer;
+    position: absolute;
+    right: $avto_gap-mini;
+    stroke: $clrTextGray;
+    transform: scale(0.8);
+  }
+  & .icn_inpt{
+    position: absolute;
+    left: $avto_gap-half;
+    stroke: $clrTextGray;
+  }
+}
+
+label{
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5ch;
+  width: fit-content;
+  margin-left: 1px;
+  padding: 0 $avto_gap-mini;
+  padding-left: 0;
+
+  & span{
+    @include avto-font1;
+    color: $avto-clrtext-gray;
+    max-width: 24ch;
+  }
+
+  & input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+  }
+
+  & input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    background-color: $avto_clr-white;
+  }
+  & input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 14px;
+    border: solid $avto_clrtext-dark;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 7px;
+  }
+  & input[type=checkbox]:checked + span{
+    color: $avto_clrtext-dark;
+  }
+}
+
+
+@media screen and (max-width: 999px) {
+
+  input{
+    padding-left: $avto_gap-sub--mobile * 4;
+    padding-right: $avto_gap-sub--mobile;
+  }
+
+  label{
+    padding: 0 $avto_gap-mini;
+
+    input[type=checkbox] {
+      position: relative;
+      cursor: pointer;
+      width: 22px;
+      height: 22px;
+    }
+    input[type=checkbox]:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: 0;
+      left: 0;
+      border-radius: 4px;
+      background-color: $avto_clr-white;
+    }
+    input[type=checkbox]:checked:after {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 14px;
+      border: solid $avto_clrtext-dark;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      position: absolute;
+      top: 2px;
+      left: 7px;
+    }
+    input[type=checkbox]:checked + span{
+      color: $avto_clrtext-dark;
+    }
+  }
+
+
+  input[type='search'], input[type='text'], input[type='number'],{
+    padding-left: $avto_gap-sub--mobile;
+  }
+
+
+
+  // Добавляет лоадер, если есть компонент
+  .ninput.loading{
+
+    .icn_drop{
+      display: none;
+    }
+
+    .loaderwrap{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      //width: 100%;
+      height: 100%;
+      right: 2px;
+      top: 0;
+
+    }
+
+    .lds-ring{
+      @include icon--mini;
+    }
+  }
+
+
+  .catalog-sort{
+    min-width: 120px;
+    border-bottom: 0;
+
+  }
+
+
+  .ninput{
+
+    .ninput_line{
+      height: $avto_input-height;
+    }
+
+
+
+    .ninput_drop{
+      //padding-top: $avto_gap-mini--mobile;
+      //padding-bottom: $avto_gap-mini--mobile;
+      margin-top: $avto_gap-mini;
+
+      max-height: $dropzone_line * 5;
+      min-height: $dropzone_line * 1;
+
+      box-shadow: 0px 10px 30px 0px rgba(226, 236, 249, 0.50);
+
+
+
+      .ninput_drop__line{
+        @include avto-font1;
+        line-height: $dropzone_line;
+
+      }
+    }
+
+    // Высота дропдауна ".dropzone--h2"
+    .ninput_drop{
+
+      &--h1{
+        max-height: $dropzone_line * 1 + $avto_gap-sub--mobile;
+        //min-height: $dropzone_line * 2;
+      }
+
+      &--h2{
+        max-height: $dropzone_line * 2 + $avto_gap-sub--mobile;
+        //min-height: $dropzone_line * 2;
+      }
+      &--h3{
+        max-height: $dropzone_line * 3 + $avto_gap-sub--mobile;
+        //min-height: $dropzone_line * 3;
+      }
+      &--h4{
+        max-height: $dropzone_line * 4 + $avto_gap-sub--mobile;
+        //min-height: $dropzone_line * 4;
+      }
+      &--h5{
+        max-height: $dropzone_line * 5 + $avto_gap-sub--mobile;
+        //min-height: $dropzone_line * 5;
+      }
+      &--h6{
+        max-height: $dropzone_line * 6 + $avto_gap-sub--mobile;
+        //min-height: $dropzone_line * 6;
+      }
+      &--h7{
+        max-height: $dropzone_line * 7 + $avto_gap-sub--mobile;
+        //min-height: $dropzone_line * 7;
+      }
+      &--h8{
+        max-height: $dropzone_line * 8 + $size * 0.75;
+        //min-height: $dropzone_line * 8;
+      }
+      &--h9{
+        max-height: $dropzone_line * 9 + $avto_gap-sub--mobile;
+        //min-height: $dropzone_line * 9;
+      }
+      &--h10{
+        max-height: $dropzone_line * 10 + $avto_gap-sub--mobile;
+        //min-height: $dropzone_line * 10;
+      }
+
+    }
+
+
+
+    & .icn_drop{
+      right: $avto_gap-mini--mobile;
+    }
+
+    & .icn_clear{
+      right: $avto_gap-mini--mobile;
+    }
+
+    & .icn_search{
+      right: $avto_gap-mini--mobile;
+    }
+
+    & .icn_inpt{
+      left: $avto_gap-mini--mobile;
+    }
+
+  }
+
+
+  .catalog-sort{
+    min-width: 200px;
+
+    & .dropactiveline{
+      padding: $avto_gap;
+
+      & .ninput_drop{
+        max-height: $dropzone_line_MOB * 6 + $size_MOB * 0.75;
+      }
+
+    }
+
+  }
+
+  .ninput{
+
+    .ninput_line{
+      border-top-left-radius: $borderRadius1;
+      border-top-right-radius: $borderRadius1;
+      border-bottom-left-radius: $borderRadius1;
+      border-bottom-right-radius: $borderRadius1;
+    }
+
+    .ninput_drop{
+      //padding-top: $avto_gap--mobile * 0.5;
+      //padding-bottom: $avto_gap--mobile * 0.5;
+      border-bottom-left-radius: $borderRadius1;
+      border-bottom-right-radius: $borderRadius1;
+      max-height: $dropzone_line_MOB * 6 + $avto_gap--mobile * 0.75;
+      min-height: $dropzone_line_MOB * 1 + $avto_gap--mobile * 0.75;
+
+
+      .ninput_drop__line{
+        line-height: $dropzone_line_MOB;
+        min--height: $dropzone_line_MOB;
+        padding-left: $avto_gap-sub--mobile;
+        padding-right: $avto_gap-sub--mobile;
+
+      }
+
+      .ninput_drop__line:hover {
+        background-color: transparent;
+      }
+    }
+
+
+    & .icn_drop{
+      right: $avto_gap-sub--mobile;
+    }
+
+    & .icn_clear{
+      right: $avto_gap-sub--mobile;
+    }
+
+    & .icn_search{
+      right: $avto_gap-sub--mobile;
+    }
+
+    & .icn_inpt{
+      left: $avto_gap-sub--mobile; //??
+    }
+
+  }
+
+
+
+
+}

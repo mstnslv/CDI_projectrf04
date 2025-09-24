@@ -1,0 +1,228 @@
+@import "/src/style/style_vars.scss";
+
+
+$size: 8px; //0.5rem
+$size-k1740: 6px;
+$size-k1420: 5px;
+$size-k1520: 4px;
+
+
+
+
+
+
+
+
+$qb_clr1: #FFFFFF;
+$qb_clr2: #1A1A1A;
+$qb_clr3: #E6E5E1;
+$qb_clr4: #000000;
+
+
+@mixin margin-vertical-big{
+  margin-top: 14vh;//156px;
+  margin-bottom:  9.25vh; //100px
+
+  @media (max-width: 1152px) {
+    font-size: 5rem;
+    margin-bottom:  3rem; //100px
+  }
+}
+
+@mixin text_reg_type1{
+  font-size: 0.9rem;//20px;
+  line-height: 1.25;
+  font-weight: 300;
+  letter-spacing: 0;
+
+
+  @media (max-width: 1152px) {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+@mixin text_reg_type2{
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+
+@mixin text_reg_type3{
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+
+//scrn header
+@mixin text_reg_type4{
+  font-size: 3.5rem;
+  line-height: 1.25;
+}
+@mixin text_reg_type5{
+  font-size: 9rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+  font-weight: 400;
+
+
+}
+
+
+@mixin border-radius-micro{
+  border-radius: 0.5rem;
+}
+@mixin border-radius-mini{
+  border-radius: 0.75rem;
+}
+@mixin border-radius-medium{
+  border-radius: 1rem;
+}
+@mixin border-radius-big{
+  border-radius: 1.25rem;
+}
+@mixin border-radius-verybig{
+  border-radius: 3.5rem;
+}
+
+
+
+
+///==============================
+/// BUTTONS
+
+
+
+
+
+.cdi_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  border-style: solid;
+  border-color: transparent;
+  @include text_reg_type1;
+  font-weight: 600;
+  white-space: nowrap;
+
+  border-radius: $size;
+  padding-left: $size;
+  padding-right: $size;
+}
+
+
+
+
+
+.cdi_btn.cdi_btn--tocat{
+  background-color: red;
+  color: $qb_clr3;
+  border-color: red;
+  gap: 0.5rem;
+
+  & span {
+    min-width: 8ch;
+  }
+}
+
+.cdi_btn.cdi_btn--telegram{
+  background-color: #34aadf !important;
+  color: $qb_clr1 !important;
+  font-weight: 500 !important;
+  @include font2;
+  border-color: #34aadf;
+  gap: 0.5rem;
+
+  & span {
+    min-width: 8ch;
+  }
+
+  & svg *{
+    stroke: $qb_clr1;
+  }
+
+
+}
+
+.cdi_btn.cdi_btn--whatsapp{
+  background-color: #25D366;
+  color: $qb_clr1;
+  border-color: #25D366;
+  gap: 0.5rem;
+
+  & span {
+    min-width: 8ch;
+  }
+
+  & svg *{
+    stroke: $qb_clr1;
+  }
+
+}
+.cdi_btn.cdi_btn--telegram, .cdi_btn.cdi_btn--whatsapp{
+  & svg{
+    width: auto;
+    height: 80%;
+    aspect-ratio: 1/1;
+  }
+
+  &:hover{
+    opacity: 0.9;
+    //transform: scale(1.05);
+  }
+}
+
+
+.cdi_buttonswrap{
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  &>*{
+    flex: 1 1 auto;
+  }
+}
+
+.cardata-mainscrn{
+  padding: 0 $size;
+  box-sizing: border-box;
+
+  & ul{
+    padding-top: $size;
+    padding-bottom: $size*4;
+
+    & li{
+      padding: $size 0;
+    }
+  }
+}
+
+.cardata-mainscrn__header{
+  margin-top: $size*2;
+  margin-bottom: $size*1;
+}
+
+@media screen and (max-width: 999px) {
+  .cardata-mainscrn__header{
+    text-align: center;
+    font-weight: bold;
+  }
+  .cardata-mainscrn{
+    padding:  $size $size*4;
+    box-sizing: border-box;
+
+    & ul{
+      padding-top: $size*2;
+      padding-bottom: $size*4;
+
+      & li{
+        padding: $size 0;
+      }
+    }
+  }
+}

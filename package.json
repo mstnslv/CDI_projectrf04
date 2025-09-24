@@ -1,0 +1,25 @@
+{
+  "name": "auto-front",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/components": "^10.2.1",
+    "@vueuse/core": "^10.2.1",
+    "axios": "^1.4.0",
+    "pinia": "^2.0.32",
+    "tiny-emitter": "^2.1.0",
+    "vite-ssg": "^28.1.0",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "sass": "^1.60.0",
+    "vite": "^4.1.4"
+  }
+}

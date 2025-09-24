@@ -1,0 +1,321 @@
+@import "/src/style/style_vars.scss";
+
+
+//For CarBlock
+
+.card{
+  width: 100%;
+  min-width: 300px;
+  height: fit-content;
+  display: flex;
+  gap: $avto_gap;
+  padding-bottom: $avto_gap;
+  margin-bottom: $avto_gap;
+  border-bottom: 1px solid #EAEBED;
+
+  .carblock_img{
+    @include mix-placeholder;
+    @include flexVertical;
+    aspect-ratio: 2/3;
+    width: 284px;
+    min-width: 284px;
+    @include borderRadius;
+    overflow: hidden;
+    border: 1px solid $clrGrayLight;
+    position: relative;
+
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      user-select: none;
+
+
+    }
+
+    &:hover{
+      //transform: scale(1.5) translateX(15%);
+      // transition: transform 0.3s ease-in-out;
+      //z-index: 100;
+      //position: relative;
+      //overflow: auto;
+
+/*      &:before{
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 99;
+      }*/
+
+    }
+  }
+
+  .carblock_info{
+    width: 100%;
+    @include flexVertical;
+    justify-content: space-between;
+
+    & .carblock_info-headline{
+      @include flexBetween;
+      align-items: center;
+      height: $avto_text-h3 * 3;
+
+      & .car_name {
+        @include mix-h3;
+        color: $avto_clrtext-dark;
+        max-width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      & .car_price {
+        @include mix-h3;
+        //width: 10ch;
+        min-width: 10ch;
+        color: $avto_clr-accent;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: right;
+        padding-right: 4px;
+      }
+    }
+
+    & .carblock_info-specline{
+      min-height: $avto_gap * 3;
+      @include flexBetween;
+      align-items: flex-end;
+      user-select: none;
+      margin-bottom: $avto_gap-mini;
+    }
+
+    & .carblock_info-specline__specs{
+      @include flexVertical;
+      gap: $avto_gap;
+
+      & .data{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.75ch;
+
+        @include mix-font-reg;
+        user-select: none;
+        color: $avto_clrtext-gray;
+        min-width: 9ch;
+
+      }
+
+      & .data_value{
+        @include mix-font-reg--bold;
+        color: $avto_clrtext-dark;
+      }
+    }
+
+    & .carblock_info-specline__wrap{
+      @include flexVertical;
+      height: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+
+
+      & .carblock_postdate{
+        color: $avto_clrtext-gray;
+        @include mix-font-reg--light;
+        padding-right: 4px;
+      }
+
+      & .carblock_info-specline__btns{
+        display: flex;
+        gap: $avto_gap-sub;
+
+        & .carblock_more-btn{
+          @include avto-btnregular;
+          @include avto-btn-clr--gray;
+        }
+
+        & .carblock_go-btn{
+          @include avto-btnregular;
+          @include avto-btn-clr--accent;
+        }
+
+      }
+    }
+
+  }
+
+
+}
+.card:last-child{
+  margin-bottom: 0;
+  border-bottom: 1px solid transparent;
+}
+
+
+@media screen and (max-width: 999px) {
+
+
+  .card{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 300px;
+    height: fit-content;
+
+    gap: $avto_gap-mini--mobile;
+    padding-bottom: $avto_gap;
+    margin-bottom: $avto_gap;
+    border-bottom: none;
+
+
+    .carblock_img{
+      @include mix-placeholder;
+      @include flexVertical;
+      //height: 300px;
+      width: 100%;
+      min-width: 100%;
+      aspect-ratio: 4/3;
+      @include borderRadius;
+      //overflow: hidden;
+      border: 0px solid $clrGrayLight;
+      box-sizing: border-box;
+      position: relative;
+
+      & img{
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+        user-select: none;
+      }
+    }
+
+    .carblock_info{
+      width: 100%;
+      @include flexVertical;
+      justify-content: space-between;
+
+      & .carblock_info-headline{
+        @include flexBetween;
+        align-items: center;
+        height: $avto_text-h3 * 3;
+
+        & .car_name {
+          @include avto-fontH3;
+          color: $avto_clrtext-dark;
+          max-width: 100%;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 1.4 !important;
+        }
+        & .car_price {
+          @include avto-fontH3;
+          //width: 10ch;
+          min-width: 10ch;
+          color: $avto_clr-accent;
+          max-width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: right;
+          padding-right: 4px;
+        }
+      }
+
+      & .carblock_info-specline{
+        min-height: $avto_gap * 3;
+        width: 100%;
+        @include flexBetween;
+        align-items: flex-start;
+        flex-direction: column;
+        user-select: none;
+        margin-bottom: $avto_gap-mini;
+      }
+
+      & .carblock_info-specline__specs{
+        @include flexVertical;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        gap: $avto_gap;
+        margin-top: $avto_gap-half--mobile;
+        margin-bottom: $avto_gap-half--mobile * 3;
+
+
+        & .data{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 0.75ch;
+
+          @include mix-font-reg;
+          user-select: none;
+          color: $avto_clrtext-gray;
+          min-width: 9ch;
+
+
+        }
+
+        & span{
+          display: none;
+        }
+
+        & .data_value{
+          display: block;
+          @include mix-font-reg--bold;
+          color: $avto_clrtext-dark;
+        }
+      }
+
+      & .carblock_info-specline__wrap{
+        @include flexVertical;
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+
+
+        & .carblock_postdate{
+          color: $avto_clrtext-gray;
+          @include mix-font-reg--light;
+          padding-right: 4px;
+          display: none;
+        }
+
+        & .carblock_info-specline__btns{
+          display: flex;
+          gap: $avto_gap-sub;
+          width: 100%;
+
+          & .carblock_more-btn{
+            @include avto-btnregular;
+            @include avto-btn-clr--gray;
+            width: 100%;
+          }
+
+          & .carblock_go-btn{
+            @include avto-btnregular;
+            @include avto-btn-clr--accent;
+            width: 100%;
+          }
+
+        }
+      }
+
+    }
+
+
+  }
+
+}

@@ -1,0 +1,172 @@
+@import "/src/style/style_vars.scss";
+
+.page_404{
+  min-height: 80vh;
+  background-color: $avto_clr-lightgray;
+
+  .p404s1{
+    padding-top: $avto_gap * 6;
+    margin-bottom: 0;
+    background-color: $avto_clr-lightgray;
+    @include avto-pageSize-center;
+    overflow-x: hidden;
+
+    & .banner404{
+      margin: 0 auto;
+      margin-bottom: $avto_gap;
+      @include avto-pageSize-center;
+      @include borderRadius;
+      padding: $avto_gap;
+      background-color: $avto-clr-white;
+
+      & .text404{
+        color: $avto-clrtext-graydark;
+        padding: $avto-gap * 6 0;
+        @include avto-fontH3;
+        text-align: center;
+
+        & span {
+          font-size: 240px;
+          line-height: 1;
+          font-weight: 800 !important;
+        }
+
+        & svg{
+          width: 212px;
+          height: 212px;
+          margin-bottom: -20px;
+          animation: wheelrotate 3s infinite;
+
+          & *{
+            fill: $avto-clrtext-graydark;
+          }
+        }
+
+        @keyframes wheelrotate {
+          from{
+            transform: rotate(0);
+          }
+          to{
+            transform: rotate(360deg);
+          }
+        }
+      }
+
+      & .infotext{
+        color: $avto-clrtext-graydark;
+        @include avto-fontH3;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+      }
+    }
+
+    .carscollection_header__bcgtext{
+      text-align: right;
+      max-width: 1280px;
+      margin: 0 auto;
+      color: #9dbccb;
+      animation: carcolor 6s infinite linear;
+    }
+  }
+  .p404s2{
+    @include avto-pageSize-center;
+
+    & .onecar_btnwrap{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      //margin-top: $avto_gap;
+      gap: $avto_gap;
+      padding:  $avto_gap * 3 0;
+    }
+
+    & .onecar_btn{
+      min-width: 160px;
+      @include avto-btnregular;
+      @include avto-btn-clr--white;
+    }
+
+    & .onecar_btn--accent{
+      @include avto-btn-clr--accent;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+
+  .page_404 {
+    min-height: 80vh;
+    background-color: $avto_clr-lightgray;
+
+    .p404s1{
+      padding-top: $avto_gap--mobile * 6;
+      margin-bottom: 0;
+
+      & .banner404{
+        margin-bottom: $avto_gap--mobile;
+        padding: $avto_gap--mobile;
+        & .text404{
+          color: $avto-clrtext-graydark;
+          padding: $avto-gap-mini--mobile * 20 0;
+          @include avto-fontH3;
+          text-align: center;
+
+          & span {
+            font-size: 120px;
+          }
+
+          & svg{
+            width: 108px;
+            height: 108px;
+            margin-bottom: -10px;
+            animation: wheelrotate 3s infinite;
+
+            & *{
+              fill: $avto-clrtext-graydark;
+            }
+          }
+        }
+
+        & .infotext{
+          color: $avto-clrtext-graydark;
+          @include avto-fontH3;
+          text-align: center;
+          font-weight: bold;
+          font-size: 16px;
+        }
+      }
+
+      .carscollection_header__bcgtext{
+        text-align: right;
+        max-width: 1280px;
+        margin: 0 auto;
+        color: #9dbccb;
+        animation: carcolor 6s infinite linear;
+      }
+    }
+    .p404s2{
+      @include avto-pageSize-center;
+
+      & .onecar_btnwrap{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        //margin-top: $avto_gap;
+        gap: $avto_gap;
+        padding:  $avto_gap * 3 0;
+      }
+
+      & .onecar_btn{
+        min-width: 160px;
+        @include avto-btnregular;
+        @include avto-btn-clr--white;
+      }
+
+      & .onecar_btn--accent{
+        @include avto-btn-clr--accent;
+      }
+    }
+
+  }
+}

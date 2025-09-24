@@ -1,0 +1,146 @@
+@import "/src/style/style_vars.scss";
+
+
+.catalogcarspecs{
+  width: 100%;
+
+  & h3{
+    @include avto-fontH3;
+    color: $clrTextBlack;
+  }
+
+  & .catalogcarspecs_list{
+
+    @include flexVertical;
+    @include borderRadius;
+    width: 100%;
+    background-color: $avto_clr-white;
+
+    & .dropzone{
+      width: 100%;
+      padding: $avto_gap;
+
+      & .droplist{
+        padding-top: 24px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 8px;
+
+        & .droplist_item{
+          @include opacityHalf;
+
+          display: flex;
+          align-items: center;
+          gap: 1ch;
+
+          & svg{
+            @include icon;
+            //stroke: $clrTextBlack;
+          }
+
+          & .available{
+            display: none;
+          }
+          & .unavailable{
+            display: block;
+          }
+
+          & .group_item-text{
+            @include font3;
+            color: $clrTextBlack;
+            font-weight: 600;
+          }
+
+        }
+
+
+        & .droplist_item.active{
+          @include opacityNot;
+
+          & .available{
+            display: block;
+          }
+          & .unavailable{
+            display: none;
+          }
+        }
+
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+
+  .catalogcarspecs {
+    //padding-bottom: $avto_gap--mobile * 4;
+
+    .catalogcarspecs_list{
+      width: 100%;
+      background-color: transparent;
+      grid-row-gap: $avto_gap--mobile;
+
+
+      & .dropzone{
+        background-color: white;
+        @include borderRadius;
+        padding: $avto_gap--mobile !important;
+
+
+        & .value{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          gap: $size_MOB * 0.5;
+
+          &:first-child {
+            display: none;
+          }
+
+        }
+
+        & .dropname{
+          cursor: pointer;
+          @include flexBetween;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: $size_MOB * 1.5;
+          width: 100%;
+
+          & .value {
+
+            & > div {
+              font-weight: 600;
+              color: $clrTextGray;
+            }
+
+            & svg {
+              //stroke: $clrTextGray;
+            }
+          }
+        }
+
+        & .droplist{
+          padding-top: $size_MOB * 1.5;
+          grid-template-columns: 1fr !important;
+          grid-gap: $size_MOB;
+
+        }
+
+        width: 100%;
+        padding: $size_MOB * 1.5 0;
+        border-bottom: 2px solid $clrGray;
+
+        //===uni
+        & h3 {
+          width: 100%;
+          padding-top: $size_MOB * 0.25;
+        }
+
+      }
+    }
+
+  }
+
+}

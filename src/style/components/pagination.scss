@@ -1,0 +1,62 @@
+@import "/src/style/style_vars.scss";
+
+
+
+
+.pagination{
+  width: 100%;
+  height: auto;
+  min-height: $avto_gap * 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .btn_pagination{
+    @include mix-btn-mega;
+    @include mix-btn--transparent;
+    border-color: $avto-clrtext-graydark;
+    color: $avto-clrtext-graydark;
+    border-width: 2px;
+
+    & svg{
+      @include icon--big;
+      animation: wheelrotate 10s linear infinite;
+
+      & *{
+        fill: $avto-clrtext-graydark;
+        stroke: $avto-clrtext-graydark;
+
+      }
+
+      @keyframes wheelrotate {
+        from{
+          transform: rotate(0);
+        }
+        to{
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    &:hover{
+      & svg *{
+          fill: $avto-clrtext-white !important;
+        }
+      }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .pagination{
+    min-height: $avto_gap--mobile * 8;
+
+    .btn_pagination{
+      @include mix-btn-mega;
+      @include mix-btn--transparent;
+      border-color: $avto-clrtext-graydark;
+      border-width: 1px;
+
+    }
+  }
+}

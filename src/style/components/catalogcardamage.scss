@@ -1,0 +1,568 @@
+@import "/src/style/style_vars.scss";
+
+
+////////////////////////////////
+////// Повреждения машины //////
+////////////////////////////////
+$cardamageimg_width_fhd: 340px;
+$cardamageimg_width_1699: 340px;
+$cardamageimg_width_1499: 340px;
+
+.catalogcardamage{
+  width: 100%;
+
+}
+.catalogcardamageimgwrap{
+  padding: $avto_gap;
+  gap: $avto_gap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @include borderRadius;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: $avto_clr-white;
+}
+
+.catalogcardamageimg{
+  position: relative;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: $cardamageimg_width_fhd;
+  min-width: $cardamageimg_width_fhd;
+  height: $cardamageimg_width_fhd;
+  box-sizing: border-box;
+
+
+
+  .catalogcardamage__mark{
+    position: absolute;
+    z-index: 1;
+  }
+}
+.catalogcardamageimg--external{
+  background-image: url('@/assets/decor/inspectcar.gif');
+}
+.catalogcardamageimg--internal{
+  background-image: url("@/assets/decor/inspectcar2.gif");
+}
+
+
+.catalogcardamagephotos{
+  //padding-top: $avto_gap * 4;
+  padding-bottom: $avto_gap * 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $avto_gap;
+  width: 100%;
+  //width: 700px;
+  //background-color: #3c9806;
+}
+.catalogcardamage__photo{
+  //max-width: 50%;
+  width: 100%;
+  @include borderRadius;
+}
+
+.catalogcardamageimgdocuments{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  //padding-top: $avto_gap * 2;
+  padding-bottom: $avto_gap * 4;
+  grid-gap: $avto_gap;
+  width: 100%;
+}
+.catalogcardamage__imgdocument{
+  @include borderRadius;
+  width: 100%;
+}
+
+
+.catalogcardamagelegend{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include borderRadius;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  background-color: $avto_clr-white;
+  padding: $avto_gap;
+  flex-direction: row;
+  min-width: 200px;
+  gap: $avto_gap;
+  @include avto-font1;
+}
+
+.catalogcardamagelegend, .catalogcardamagesummary{
+
+  & .catalogcardamage__mark{
+    width: 23px;
+    height: 22px;
+    min-width: 23px;
+    @include borderRadius-mini;
+    overflow: hidden;
+
+    &:after{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      @include avto-font2;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      //display: none;
+
+    }
+  }
+}
+
+.catalogcardamagesummary{
+  padding-top: $avto-gap * 2;
+  padding-bottom: $avto-gap * 2;
+  display: flex;
+  flex-direction: row;
+  gap: $avto-gap * 4;
+}
+.catalogcardamage__summaryblock{
+  max-width: $cardamageimg_width_fhd;
+  width: $cardamageimg_width_fhd;
+  display: flex;
+  flex-direction: column;
+  gap: $avto-gap;
+  padding-left: $avto-gap;
+}
+
+.catalogcardamage__headline{
+  @include avto-fontH3;
+  padding-bottom: $avto-gap-half;
+  color: $avto_clrtext-dark;
+}
+.catalogcardamage__summaryline{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $avto-gap-half;
+
+  & div:last-child{
+    user-select: text;
+    @include avto-font1;
+    color: $avto-clrtext-graydark;
+
+  }
+}
+.catalogcardamage__legendline{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $avto-gap-half;
+
+  &>div:last-child{
+    user-select: none;
+    color: $avto_clrtext-gray;
+  }
+}
+
+.catalogcardamage__mark{
+
+  width: 6%;//23px;
+  height: 6%;//23px;
+  min-width: 6%;//23px;
+  @include borderRadius-mini;
+  overflow: hidden;
+
+  &:after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    @include avto-font2;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    //display: none;
+
+  }
+
+}
+
+
+
+
+@media screen and (max-width: 999px) {
+  .catalogcardamage{
+
+  }
+  .catalogcardamageimgwrap{
+    margin-top: 0;
+    gap: $avto_gap--mobile * 4;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .catalogcardamageimg{
+    width: 320px;//400px;
+    min-width: 320px;//;
+    height: 320px;//px;
+
+  }
+
+
+  .catalogcardamagephotos{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $avto_gap--mobile;
+  }
+
+
+  .catalogcardamageimgdocuments{
+    padding-bottom: $avto_gap--mobile * 2;
+    grid-template-columns: 1fr;
+    grid-gap: $avto_gap--mobile;
+  }
+
+  .catalogcardamagelegend{
+    min-width: 200px;
+    gap: $avto_gap--mobile;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .catalogcardamagelegend, .catalogcardamagesummary{
+
+    & .catalogcardamage__mark{
+      //@include icon--micro;
+    }
+  }
+
+
+  .catalogcardamagesummary{
+    //max-width: 600px;
+    gap: $avto_gap--mobile * 1;
+    margin: 0 auto;
+    padding-top: $avto_gap--mobile * 2;
+    padding-bottom: $avto-gap--mobile * 2;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .catalogcardamage__summaryblock{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $avto_gap--mobile;
+    padding-left: 0;
+  }
+
+  .catalogcardamage__headline{
+    padding-bottom: 0;
+    padding-top: 0;
+    display: none;
+
+  }
+  .catalogcardamage__summaryline{
+    gap: $avto_gap--mobile * 0.5;
+  }
+  .catalogcardamage__legendline{
+    gap: $avto_gap-half--mobile;
+  }
+
+  .catalogcardamage__mark{
+
+
+  }
+}
+@media screen and (max-width: 339px) {
+  .catalogcardamageimg{
+    width: 288px;//400px;
+    min-width: 288px;//;
+    height: 288px;//px;
+  }
+
+}
+
+
+
+.catalogcardamage__mark--replace{
+  background-color: $clrTextRed;
+
+  &:after{
+    content: 'X';
+  }
+}
+.catalogcardamage__mark--repair{
+  background-color: $clrBluePlus;
+
+  &:after{
+    content: 'W';
+  }
+}
+.catalogcardamage__mark--corrosion{
+  background-color: $clrOrange;
+
+  &:after{
+    content: 'C';
+    //transform: scale(1.1);
+  }
+}
+.catalogcardamage__mark--scratches{
+  background-color: $clrGrayDark;
+
+  &:after{
+    content: 'A';
+    transform: translateY(-1px);
+  }
+}
+.catalogcardamage__mark--defection{
+  background-color: $clrViolet;
+
+  &:after{
+    content: 'U';
+  }
+}
+.catalogcardamage__mark--damage{
+  background-color: $clrBrown;
+  &:after{
+    content: 'T';
+  }
+}
+
+
+// Верх
+.catalogcardamage__mark--luguage{
+  left: 47%;
+  top: 82%;
+}
+.catalogcardamage__mark--engine{
+  left: 47%;
+  top: 16%;
+
+}
+.catalogcardamage__mark--bumpfront{
+  left: 47%;
+  top: 5%;
+}
+.catalogcardamage__mark--bumprear{
+  left: 47%;
+  top: 87%;
+}
+
+//Фары
+.catalogcardamage__mark--lightfrontleft{
+  left: 15%;
+  top: 10%;
+}
+.catalogcardamage__mark--lightfrontright{
+  left: 77%;
+  top: 10%;
+}
+.catalogcardamage__mark--lightrearleft{
+  left: 17%;
+  top: 84%;
+}
+.catalogcardamage__mark--lightrearright {
+  left: 77%;
+  top: 84%;
+}
+
+
+
+
+
+// + Крылья
+.catalogcardamage__mark--frontFenderLeft{
+  left: 16.8%;
+  top: 24%;
+}
+.catalogcardamage__mark--frontFenderRight {
+  left: 77%;
+  top: 24%;
+}
+.catalogcardamage__mark--quarterPanelLeft{
+  left: 18%;
+  top: 73%;
+}
+.catalogcardamage__mark--quarterPanelRight {
+  left: 76%;
+  top: 73%;
+}
+
+//Двери +++
+.catalogcardamage__mark--frontDoorLeft{
+  left: 16%;
+  top: 40%;
+}
+.catalogcardamage__mark--frontDoorRight{
+  left: 78%;
+  top: 40%;
+}
+.catalogcardamage__mark--rearDoorLeft{
+  left: 16%;
+  top: 58%;
+}
+.catalogcardamage__mark--rearDoorRight{
+  left: 78%;
+  top: 58%;
+}
+
+// + Крышка богажника
+.catalogcardamage__mark--trunkLead{
+  left: 47.2%;
+  top: 82%;
+}
+
+// + Капот
+.catalogcardamage__mark--radiatorSupport{
+  left: 47.2%;
+  top: 6%;
+}
+.catalogcardamage__mark--hood{
+  left: 47.2%;
+  top: 18%;
+}
+
+// + крыша
+.catalogcardamage__mark--dashPanel{
+  left: 47.2%;
+  top: 60%;
+}
+
+// + Пороги - панели
+.catalogcardamage__mark--sideSillPanelLeft{
+  left: 7%;
+  top: 50%;
+}
+.catalogcardamage__mark--sideSillPanelRight{
+  left: 86.8%;
+  top: 50%;
+}
+
+
+
+
+// НИЗ АВТО \\
+
+// + Перед
+.catalogcardamage__mark--frontPanel{
+  left: 46.8%;
+  top: 12%;
+}
+.catalogcardamage__mark--insidePanelLeft{
+  left: 35.4%;
+  top: 20%;
+}
+.catalogcardamage__mark--insidePanelRight{
+  left: 58%;
+  top: 20%;
+}
+
+// + Ланжероны - дно
+.catalogcardamage__mark--frontSideMemberLeft{
+  left: 40.8%;
+  top: 23%;
+}
+.catalogcardamage__mark--frontSideMemberRight{
+  left: 52.6%;
+  top: 23%;
+}
+.catalogcardamage__mark--rearSideMemberLeft{
+  left: 39.5%;
+  top: 77%;
+}
+.catalogcardamage__mark--rearSideMemberRight{
+  left: 54%;
+  top: 77%;
+}
+
+// + Колесные арки
+.catalogcardamage__mark--frontWheelHouseLeft{
+  left: 35%;
+  top: 28%;
+}
+.catalogcardamage__mark--frontWheelHouseRight{
+  left: 58.5%;
+  top: 28%;
+}
+.catalogcardamage__mark--rearWheelHouseLeft{
+  left: 34%;
+  top: 75%;
+}
+.catalogcardamage__mark--rearWheelHouseRight{
+  left: 59.5%;
+  top: 75%;
+}
+
+// + Горизонтальный ланжерон
+.catalogcardamage__mark--crossMember{
+  left: 46.8%;
+  top: 33%;
+}
+
+// + за ланжероном полоса, но название как у крыши
+.catalogcardamageimg--internal .catalogcardamage__mark--dashPanel{
+  left: 46.8%;
+  top: 37%;
+}
+
+// + панель пола
+.catalogcardamage__mark--floorPanel{
+  left: 46.8%;
+  top: 52%;
+}
+
+// + Сзади горизонтальное
+.catalogcardamage__mark--packageTray{
+  left: 46.8%;
+  top: 65.8%;
+}
+
+// + Задний бампер
+.catalogcardamage__mark--rearPanel{
+  left: 46.8%;
+  top: 87%;
+}
+
+// + Багажник дна
+.catalogcardamage__mark--trunkFloor{
+  left: 46.8%;
+  top: 77%;
+}
+
+// + панель стойки
+.catalogcardamage__mark--pillarPanelFrontLeft{
+  left: 25%;
+  top: 37%;
+}
+.catalogcardamage__mark--pillarPanelMiddleLeft{
+  left: 25%;
+  top: 51%;
+}
+.catalogcardamage__mark--pillarPanelRearLeft{
+  left: 25%;
+  top: 67%;
+}
+.catalogcardamage__mark--pillarPanelFrontRight{
+  left: 69%;
+  top: 37%;
+}
+.catalogcardamage__mark--pillarPanelMiddleRight{
+  left: 69%;
+  top: 51%;
+}
+.catalogcardamage__mark--pillarPanelRearRight{
+  left: 69%;
+  top: 67%;
+}
