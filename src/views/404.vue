@@ -1,9 +1,9 @@
 <script setup>
-  import Menu from "../components/StaticBlocks/Menu.vue";
+  import Menu from "../components/staticBlocks/Menu.vue";
   import IconTelephone from "../components/icons/IconTelephone.vue";
-  import Footer from "../components/StaticBlocks/Footer.vue";
-  import ModalContacts from "../components/StaticBlocks/ModalContacts.vue";
-  import Loader from "../components/StaticBlocks/Loader.vue";
+  import Footer from "../components/staticBlocks/Footer.vue";
+  import ModalContacts from "../components/staticBlocks/ModalContacts.vue";
+  import Loader from "../components/staticBlocks/Loader.vue";
   import IconWheel from "../components/icons/IconWheel.vue";
   import {default as eventBus} from "../eventBus.js";
 

@@ -2,7 +2,7 @@
 import AutogolderMenu from "../components/AUTOGOLDER/AutogolderMenu.vue";
 import AutogolderFooter from "../components/AUTOGOLDER/AutogolderFooter.vue";
 
-import Loader from "../components/StaticBlocks/Loader.vue"
+import Loader from "../components/staticBlocks/Loader.vue"
 import IconEngine from "../components/icons/IconEngine.vue";
 import IconOdometr from "../components/icons/IconOdometr.vue";
 import IconGearBox from "../components/icons/IconGearBox.vue";

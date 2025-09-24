@@ -1,8 +1,8 @@
 <script setup>
-  import Menu from "../components/StaticBlocks/Menu.vue";
-  import Footer from "../components/StaticBlocks/Footer.vue";
+  import Menu from "../components/staticBlocks/Menu.vue";
+  import Footer from "../components/staticBlocks/Footer.vue";
 
-  import Loader from "../components/StaticBlocks/Loader.vue"
+  import Loader from "../components/staticBlocks/Loader.vue"
   import IconEngine from "../components/icons/IconEngine.vue";
   import IconOdometr from "../components/icons/IconOdometr.vue";
   import IconGearBox from "../components/icons/IconGearBox.vue";
