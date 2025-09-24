@@ -63,7 +63,7 @@
         </div>
 
       </div>
-      <article class="footerafter">
+<!--      <article class="footerafter">
         <div class="graytext">
           <a href="https://cardataimport.com" target="_blank">
           <span class="footerafter_text">
@@ -71,7 +71,7 @@
           </span>
           </a>
         </div>
-      </article>
+      </article>-->
     </div>
     <!--Разработка сайта - Степанов Виктор Игоревич-->
 
